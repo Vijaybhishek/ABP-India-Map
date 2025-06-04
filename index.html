@@ -956,5 +956,25 @@ const map = L.map('map', {
   </div>
 </div></div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+<script>
+fetch('all_state_info_complete.csv')
+  .then(response => response.text())
+  .then(csvText => {
+    const data = Papa.parse(csvText, { header: true }).data;
+    const table = document.getElementById('state-data-table');
+    const thead = table.querySelector('thead');
+    const tbody = table.querySelector('tbody');
+
+    // Add headers
+    const headers = Object.keys(data[0]);
+    thead.innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>';
+
+    // Add rows
+    tbody.innerHTML = data.map(row =>
+      '<tr>' + headers.map(h => `<td>${row[h] || ''}</td>`).join('') + '</tr>'
+    ).join('');
+  });
+</script>
 </body>
 </html>
