@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DEETS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<style>
+
+  body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    background: linear-gradient(to bottom right, #ff9933, #ffffff, #138808); /* tricolour gradient */
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+h1 {
+  font-size: 1.4rem;
+  color: #C14600;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  margin: 0; /* removes gap inside the title box */
+}
+
+h2 {
+  font-size: 1.1rem;
+  color: #C14600;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  margin: 0; /* removes gap inside the title box */
+}
+
+.title-box {
+  background: linear-gradient(135deg, #fffef5, #e6f9e6); /* theme-matching soft gradient */
+  padding: 8px 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 18px;
+  text-align: center;
+  display: inline-block;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 6px auto;
+  width: 60%;
+  opacity: 1.0;
+}
+
+
+  .container {
+    display: flex;
+    width: 95%;
+    max-width: 1600px;
+    height: 285vh;
+    background: cream;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+
+#map {
+  flex: 2;
+  height: 100%;
+background: linear-gradient(to bottom right, #ffffff, #ccffcc); /* softer minty touch */
+  border-right: 1px solid #eee;
+  box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#legend {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 11px;              /* smaller text */
+  color: #333;
+  background: yellow;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  padding: 3px 6px;             /* minimal padding */
+  margin: 0;
+  line-height: 0.8;
+  max-width: 140px;
+  z-index: 1000;
+  position: absolute;
+  bottom: 8px;                 /* tighter to bottom */
+  left: 15px;
+}
+
+/* Hover tooltip for state names */
+.state-tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  pointer-events: none;
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.state-tooltip.visible {
+  opacity: 1;
+}
+
+  #sidebar {
+    flex: 1.2;
+    background: #f0fff4; /* soft green background */
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    font-size: 16px;
+    color: #333;
+  }
+
+  #info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+.info-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #CD5C08;
+  margin: 0 auto 10px;
+  text-align: center;
+  background: linear-gradient(135deg, #fffef5, #e6f9e6); /* super light orange to pale green */
+  padding: 6px 12px;
+  border-radius: 6px;
+  width: fit-content;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* even softer shadow */
+}
+
+.package-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #CD5C08;
+  margin: 0 auto 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #fffef5, #e6f9e6); /* same super light gradient */
+  padding: 6px 12px;
+  border-radius: 6px;
+  width: fit-content;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 20px;
+  border-left: 5px solid #ff9933; /* saffron highlight */
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: -10px; /* 👈 pulls it up slightly */
+}
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+
+    #map {
+      height: 1200px;
+      border-right: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    #sidebar {
+      border-radius: 0 0 20px 20px;
+    }
+  }
+
+.leaflet-interactive {
+  transition: fill 0.3s ease;
+  stroke: #333;
+  stroke-width: 1.5;
+}
+
+.leaflet-interactive:hover {
+  stroke: #000;
+  stroke-width: 3;
+  cursor: pointer;
+}
+#map-container {
+  position: relative;
+  flex: 2;
+  height: 100%;
+}
+
+#search-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: 140px; /* reduced width */
+  height: 32px; /* fixed height for alignment */
+}
+
+#state-search {
+  width: 100%;
+  height: 100%;
+  padding: 4px 8px 4px 28px; /* adjust for icon space */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  outline: none;
+  box-sizing: border-box;
+}
+
+#state-search:focus {
+  border-color: #ff9933;
+  box-shadow: 0 2px 6px rgba(255, 153, 51, 0.3);
+}
+
+.search-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #888;
+  pointer-events: none;
+  height: 16px;
+  line-height: 16px;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 1001;
+  display: none;
+}
+
+.search-suggestion {
+  padding: 7px 9px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.search-suggestion:hover {
+  background-color: #f0fff4;
+}
+
+.search-suggestion:last-child {
+  border-bottom: none;
+}
+
+
+.highlighted-state {
+  stroke: #ff9933 !important;
+  stroke-width: 4 !important;
+  fill-opacity: 1 !important;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="title-box">
+
+  <h1>Ammended BharatNet Program - Deployment Overview </h1>
+  <hr class="divider">
+  <h2>A State-Wise Interactive Display of India's Digital Infrastructure Rollout</h2>
+
+</div>
+  <div class="container">
+    
+
+    <div id="sidebar">
+        
+      <div id="info">
+        <div class="info-title"> Upload CSV File to Convert & Download as JSON  </div>
+        <p style="text-align:center; width: 180px; margin: 0 auto;"> <input type="file" id="csvFile" accept=".csv"></p>
+      </div>
+    </div>
+  </div>
+
+ 
+
+   <script>
+function loadCsvData() {
+  document.getElementById('csvFile').addEventListener('change', function (e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const content = e.target.result;
+      const lines = content.trim().split('\n');
+      const headers = lines[0].split('\t');
+
+      const jsonResult = {};
+
+      for (let i = 1; i < lines.length; i++) {
+        const values = lines[i].split('\t').map(v => v === undefined ? "" : v); // Convert undefined to blank
+
+        const statew = (values[0] || "").split(',');
+        const state = statew[0] || "";
+
+        const data = {
+          "Package Number": Number(values[1]) || 0,
+          "PIA": values[2] || "",
+          "Agreement Signing Date": values[3] || "",
+          "GPs in Scope": {
+            "New/Upgraded": values[4] || "",
+            "Total": values[5] || ""
+          },
+          "Active FTTH Connections": values[6] || "",
+          "HOTO Completed GPs": {
+            "Target": values[7] || "",
+            "Count": values[8] || "",
+            "Target Achieved %": Number(values[9]) || 0
+          },
+          "Survey Completed GPs": {
+            "Physical (Target)": values[10] || "",
+            "Desktop/Physical": values[11] || "",
+            "Target Achieved in Physical Survey %": values[12] || ""
+          },
+          "Commissioned": {
+            "Milestones (May 25)": values[13] || "",
+            "Target Achieved %": "-"
+          }
+        };
+
+        if (!jsonResult[state]) {
+          jsonResult[state] = [];
+        }
+
+        jsonResult[state].push(data);
+      }
+
+      const jsonBlob = new Blob([JSON.stringify(jsonResult, null, 2)], { type: 'application/json' });
+      const downloadLink = document.createElement('a');
+      downloadLink.href = URL.createObjectURL(jsonBlob);
+      downloadLink.download = 'mapdata.json';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    };
+
+    reader.readAsText(file);
+  });
+}
+
+loadCsvData();
+</script>
+
+ 
+ 
+</body>
+</html>
