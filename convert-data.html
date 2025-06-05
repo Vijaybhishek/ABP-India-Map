@@ -300,80 +300,103 @@ background: linear-gradient(to bottom right, #ffffff, #ccffcc); /* softer minty 
         
       <div id="info">
         <div class="info-title"> Upload CSV File to Convert & Download as JSON  </div>
-        <p style="text-align:center; width: 180px; margin: 0 auto;"> <input type="file" id="csvFile" accept=".csv"></p>
+        <p style="text-align:center; width: 180px; margin: 0 auto;"> 
+          <input type="file" id="csvFileInput" accept=".csv">
+          <button type="submit" id="convertBtn"  >Convert & Download JSON </button>
+
+        </p>
       </div>
     </div>
   </div>
 
  
+<!-- PapaParse library -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
-   <script>
-function loadCsvData() {
-  document.getElementById('csvFile').addEventListener('change', function (e) {
-    const file = e.target.files[0];
-    if (!file) return;
+  <script>
+    // Transform flat array of CSV rows into nested JSON by State
+    function transformData(flatArray) {
+      const result = {};
 
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      const content = e.target.result;
-      const lines = content.trim().split('\n');
-      const headers = lines[0].split('\t');
+      flatArray.forEach(item => {
+        const state = item["State"];
 
-      const jsonResult = {};
+        if (!result[state]) {
+          result[state] = [];
+        }
 
-      for (let i = 1; i < lines.length; i++) {
-        const values = lines[i].split('\t').map(v => v === undefined ? "" : v); // Convert undefined to blank
-
-        const statew = (values[0] || "").split(',');
-        const state = statew[0] || "";
-
-        const data = {
-          "Package Number": Number(values[1]) || 0,
-          "PIA": values[2] || "",
-          "Agreement Signing Date": values[3] || "",
+        const transformedItem = {
+          "Package Number": isNaN(Number(item["Package Number"])) ? item["Package Number"] : Number(item["Package Number"]),
+          "PIA": item["PIA"],
           "GPs in Scope": {
-            "New/Upgraded": values[4] || "",
-            "Total": values[5] || ""
+            "New/Upgraded": item["GPs New/Upgraded"] || "-",
+            "Total": item["GPs Total"] || "-"
           },
-          "Active FTTH Connections": values[6] || "",
+          "Active FTTH Connections": item["Active FTTH Connections"] || "-",
           "HOTO Completed GPs": {
-            "Target": values[7] || "",
-            "Count": values[8] || "",
-            "Target Achieved %": Number(values[9]) || 0
+            "Target": item["HOTO Target"] || "-",
+            "Count": item["HOTO Count"] || "-",
+            "Target Achieved %": item["HOTO %"] || "-"
           },
           "Survey Completed GPs": {
-            "Physical (Target)": values[10] || "",
-            "Desktop/Physical": values[11] || "",
-            "Target Achieved in Physical Survey %": values[12] || ""
+            "Physical (Target)": item["Survey Target"] || "-",
+            "Desktop/Physical": item["Desktop/Physical"] || "-",
+            "Target Achieved in Physical Survey%": item["Survey %"] || "-"
           },
           "Commissioned": {
-            "Milestones (May 25)": values[13] || "",
-            "Target Achieved %": "-"
+            "Milestones (May 25)": item["Commissioned Milestones"] || "-",
+            "Target Achieved %": item["Commissioned %"] || "-"
           }
         };
 
-        if (!jsonResult[state]) {
-          jsonResult[state] = [];
-        }
+        result[state].push(transformedItem);
+      });
 
-        jsonResult[state].push(data);
+      return result;
+    }
+
+    document.getElementById('convertBtn').addEventListener('click', () => {
+      const fileInput = document.getElementById('csvFileInput');
+      if (!fileInput.files.length) {
+        alert('Please select a CSV file first.');
+        return;
       }
 
-      const jsonBlob = new Blob([JSON.stringify(jsonResult, null, 2)], { type: 'application/json' });
-      const downloadLink = document.createElement('a');
-      downloadLink.href = URL.createObjectURL(jsonBlob);
-      downloadLink.download = 'mapdata.json';
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
-    };
+      const file = fileInput.files[0];
 
-    reader.readAsText(file);
-  });
-}
+      Papa.parse(file, {
+        header: true,
+        skipEmptyLines: true,
+        complete: function(results) {
+          // Clean commas from numeric-looking fields
+          const cleanedData = results.data.map(row => {
+            for (const key in row) {
+              if (row[key] && row[key].match(/^[0-9,\/\s\-]+$/)) {
+                row[key] = row[key].replace(/,/g, '').trim();
+              }
+            }
+            return row;
+          });
 
-loadCsvData();
-</script>
+          const nestedJson = transformData(cleanedData);
+
+          const blob = new Blob([JSON.stringify(nestedJson, null, 2)], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = file.name.replace(/\.[^/.]+$/, '') + '.json';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          URL.revokeObjectURL(url);
+        },
+        error: function(err) {
+          alert('Error parsing CSV: ' + err.message);
+        }
+      });
+    });
+  </script>
 
  
  

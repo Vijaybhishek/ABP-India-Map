@@ -1,648 +1,648 @@
 {
   "Punjab": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 12,
+      "PIA": "HFCL",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "673/12664",
+        "Total": "13337"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "178933",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "6332",
+        "Count": "3209",
+        "Target Achieved %": "51"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "667",
+        "Desktop/Physical": "5267/80",
+        "Target Achieved in Physical Survey%": "12"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "1334",
         "Target Achieved %": "-"
       }
     }
   ],
   "Uttar Pradesh": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": "3/UP(E)",
+      "PIA": "RVNL",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "8644/34428",
+        "Total": "43072"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "19584",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "17214",
+        "Count": "9869",
+        "Target Achieved %": "66"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "2154",
+        "Desktop/Physical": "9674 / 1331",
+        "Target Achieved in Physical Survey%": "62"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "50",
         "Target Achieved %": "-"
       }
     },
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": "6/UP(W)",
+      "PIA": "RVNL",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "3769/12449",
+        "Total": "16218"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "18454",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "6225",
+        "Count": "4089",
+        "Target Achieved %": "66"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "2154",
+        "Desktop/Physical": "9674 / 1331",
+        "Target Achieved in Physical Survey%": "42"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "60",
         "Target Achieved %": "-"
       }
     }
   ],
   "Himachal Pradesh": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 9,
+      "PIA": "ITI",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "3363/252",
+        "Total": "3615"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "2323",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "126",
+        "Count": "258",
+        "Target Achieved %": "205"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "181",
+        "Desktop/Physical": "3615/258",
+        "Target Achieved in Physical Survey%": "64"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "362",
         "Target Achieved %": "-"
       }
     }
   ],
   "West Bengal": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 10,
+      "PIA": "ITI",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "688/2744",
+        "Total": "3412"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "45876",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "1372",
+        "Count": "1105",
+        "Target Achieved %": "81"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "171",
+        "Desktop/Physical": "253/0",
+        "Target Achieved in Physical Survey%": "0"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "341",
         "Target Achieved %": "-"
       }
     }
   ],
   "Andaman and Nicobar": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 10,
+      "PIA": "ITI",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "688/2744",
+        "Total": "3412"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "45876",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "1372",
+        "Count": "1105",
+        "Target Achieved %": "81"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "171",
+        "Desktop/Physical": "253/0",
+        "Target Achieved in Physical Survey%": "0"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "341",
         "Target Achieved %": "-"
       }
     }
   ],
   "Bihar": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 7,
+      "PIA": "PolyCab",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "81/8324",
+        "Total": "8405"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "29493",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "4162",
+        "Count": "808",
+        "Target Achieved %": "19"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "420",
+        "Desktop/Physical": "1656/23",
+        "Target Achieved in Physical Survey%": "0"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "841",
         "Target Achieved %": "-"
       }
     }
   ],
   "Madhya Pradesh": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 1,
+      "PIA": "AWO Issued",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "5046/17850",
+        "Total": "22896"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "35585",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "8925",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "1145",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "2290",
         "Target Achieved %": "-"
       }
     }
   ],
   "Dādra and Nagar Haveli and Damān and Diu": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 1,
+      "PIA": "AWO Issued",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "5046/17850",
+        "Total": "22896"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "35585",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "8925",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "1145",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "2290",
         "Target Achieved %": "-"
       }
     }
   ],
   "Uttarakhand": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 5,
+      "PIA": "AWO Issued",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "6118/1819",
+        "Total": "7937"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "14158",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "910",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "397",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "794",
         "Target Achieved %": "-"
       }
     }
   ],
   "Jammu and Kashmir": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 10,
+      "PIA": "AWO Issued",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "4079/413",
+        "Total": "4492"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "4005",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "207",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "225",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "449",
         "Target Achieved %": "-"
       }
     }
   ],
   "Ladakh": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 11,
+      "PIA": "AWO Issued",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "4079/413",
+        "Total": "4492"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "4005",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "207",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "225",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "449",
         "Target Achieved %": "-"
       }
     }
   ],
   "Arunachal Pradesh": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 7,
+      "PIA": "AWO Issued",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "5394/508",
+        "Total": "5902"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "4150",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "254",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "295",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "590",
         "Target Achieved %": "-"
       }
     }
   ],
   "Nagaland": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 7,
+      "PIA": "AWO Issued",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "5394/508",
+        "Total": "5902"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "4150",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "254",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "295",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "590",
         "Target Achieved %": "-"
       }
     }
   ],
   "Manipur": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 7,
+      "PIA": "AWO Issued",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "5394/508",
+        "Total": "5902"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "4150",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "254",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "295",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "590",
         "Target Achieved %": "-"
       }
     }
   ],
   "Kerala": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 16,
+      "PIA": "AWO Issued",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "1/977",
+        "Total": "978"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "160127",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "489",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "49",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "98",
         "Target Achieved %": "-"
       }
     }
   ],
   "Rajasthan": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 3,
+      "PIA": "--",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "2606/8746",
+        "Total": "11352"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "38616",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "4373",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "568",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "1135",
         "Target Achieved %": "-"
       }
     }
   ],
   "Haryana": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 13,
+      "PIA": "--",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "174/6082",
+        "Total": "6256"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "116467",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "3041",
+        "Count": "3209",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "323",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "616",
         "Target Achieved %": "-"
       }
     }
   ],
   "Mizoram": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 14,
+      "PIA": "--",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "3056/761",
+        "Total": "3817"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "953",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "381",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "191",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "382",
         "Target Achieved %": "-"
       }
     }
   ],
   "Tripura": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 14,
+      "PIA": "--",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "3056/761",
+        "Total": "3817"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "953",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "381",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "191",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "382",
         "Target Achieved %": "-"
       }
     }
   ],
   "Meghalaya": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 14,
+      "PIA": "--",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "3056/761",
+        "Total": "3817"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "953",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "381",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "191",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "382",
         "Target Achieved %": "-"
       }
     }
   ],
   "Assam": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 15,
+      "PIA": "--",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "1163/1502",
+        "Total": "2665"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "3427",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "751",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "133",
+        "Desktop/Physical": "5267/80",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "267",
         "Target Achieved %": "-"
       }
     }
   ],
   "Goa": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 4,
+      "PIA": "AWO Issued",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "209/6182",
+        "Total": "6391"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "31436",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "3091",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "320",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "639",
         "Target Achieved %": "-"
       }
     }
   ],
   "Karnataka": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 4,
+      "PIA": "AWO Issued",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "209/6182",
+        "Total": "6391"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "31436",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "3091",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "320",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "639",
         "Target Achieved %": "-"
       }
     }
   ],
   "Puducherry": [
     {
-      "Package Number": 0,
-      "PIA": "",
-      "Agreement Signing Date": "",
+      "Package Number": 4,
+      "PIA": "AWO Issued",
       "GPs in Scope": {
-        "New/Upgraded": "",
-        "Total": ""
+        "New/Upgraded": "209/6182",
+        "Total": "6391"
       },
-      "Active FTTH Connections": "",
+      "Active FTTH Connections": "31436",
       "HOTO Completed GPs": {
-        "Target": "",
-        "Count": "",
-        "Target Achieved %": 0
+        "Target": "3091",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "",
-        "Desktop/Physical": "",
-        "Target Achieved in Physical Survey %": ""
+        "Physical (Target)": "320",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "",
+        "Milestones (May 25)": "639",
+        "Target Achieved %": "-"
+      }
+    }
+  ],
+  "Maharashtra1": [
+    {
+      "Package Number": 4,
+      "PIA": "AWO Issued",
+      "GPs in Scope": {
+        "New/Upgraded": "209/6182",
+        "Total": "6391"
+      },
+      "Active FTTH Connections": "31436",
+      "HOTO Completed GPs": {
+        "Target": "3091",
+        "Count": "-",
+        "Target Achieved %": "-"
+      },
+      "Survey Completed GPs": {
+        "Physical (Target)": "320",
+        "Desktop/Physical": "-",
+        "Target Achieved in Physical Survey%": "-"
+      },
+      "Commissioned": {
+        "Milestones (May 25)": "639",
         "Target Achieved %": "-"
       }
     }
