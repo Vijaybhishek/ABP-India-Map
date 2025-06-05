@@ -287,9 +287,11 @@ background: linear-gradient(to bottom right, #ffffff, #ccffcc); /* softer minty 
 <body>
 
 <div class="title-box">
+
   <h1>Ammended BharatNet Program - Deployment Overview </h1>
   <hr class="divider">
   <h2>A State-Wise Interactive Display of India's Digital Infrastructure Rollout</h2>
+
 </div>
   <div class="container">
     <div id="map-container">
@@ -305,6 +307,7 @@ background: linear-gradient(to bottom right, #ffffff, #ccffcc); /* softer minty 
     </div>
 
     <div id="sidebar">
+        
       <div id="info">
         <div class="info-title">State Information</div>
         <p style="text-align:center;">Click on any state to view information</p>
@@ -318,7 +321,14 @@ background: linear-gradient(to bottom right, #ffffff, #ccffcc); /* softer minty 
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-  const stateInfo = {
+
+
+function loadMap(d){
+
+
+    const stateInfo=d;
+    let test = {
+   
     "Punjab": [
       {
         "Package Number" : 12,
@@ -606,6 +616,8 @@ background: linear-gradient(to bottom right, #ffffff, #ccffcc); /* softer minty 
      ],
   };
 
+ 
+
 const map = L.map('map', {
   center: [22.5, 78.9],
   zoom: 5,
@@ -679,8 +691,10 @@ const map = L.map('map', {
   }
 
   function displayStateInfo(name) {
+
     const infoDiv = document.getElementById("info");
     const packages = stateInfo[name] || [];
+    console.log(packages)
 
     if (packages.length === 0) {
       infoDiv.innerHTML = `<div class="info-title">State Information</div><div class="package-name">${name}</div><p style="text-align:center;">No data available for ${name}</p>`;
@@ -930,6 +944,31 @@ const map = L.map('map', {
       console.error("Failed to load GeoJSON:", err);
       document.getElementById("info").innerHTML = `<p style="color:red; text-align:center;">Failed to load map data.</p>`;
     });
+}
+
+   
+
+
+ 
+    function loadJSON() {
+      fetch('mapdata.json')  // <-- Change this to your actual file path
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+           loadMap(data)
+
+        })
+        .catch(error => {
+          document.getElementById('output').textContent = 'Error: ' + error;
+        });
+    }
+ 
+loadJSON();
+
 </script>
 
 <div id="legend" style="position: absolute; bottom: 20px; left: 53px; background: rgba(255,255,255,0.98); padding: 8px 12px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-size: 10px; max-width: 170px; border: 1px solid rgba(200,200,200,0.3);">
