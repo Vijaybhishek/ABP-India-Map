@@ -1,7 +1,7 @@
 {
   "Punjab": [
     {
-      "Package Number": 12,
+      "Package Number": 13,
       "PIA": "HFCL",
       "GPs in Scope": {
         "New/Upgraded": "673/12664",
@@ -598,31 +598,6 @@
     }
   ],
   "Puducherry": [
-    {
-      "Package Number": 4,
-      "PIA": "AWO Issued",
-      "GPs in Scope": {
-        "New/Upgraded": "209/6182",
-        "Total": "6391"
-      },
-      "Active FTTH Connections": "31436",
-      "HOTO Completed GPs": {
-        "Target": "3091",
-        "Count": "-",
-        "Target Achieved %": "-"
-      },
-      "Survey Completed GPs": {
-        "Physical (Target)": "320",
-        "Desktop/Physical": "-",
-        "Target Achieved in Physical Survey%": "-"
-      },
-      "Commissioned": {
-        "Milestones (May 25)": "639",
-        "Target Achieved %": "-"
-      }
-    }
-  ],
-  "Maharashtra1": [
     {
       "Package Number": 4,
       "PIA": "AWO Issued",
