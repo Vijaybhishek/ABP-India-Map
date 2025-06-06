@@ -10,17 +10,23 @@
       "Active FTTH Connections": "178933",
       "HOTO Completed GPs": {
         "Target": "6332",
-        "Count": "3209",
-        "Target Achieved %": "51"
+        "Count": "6226",
+        "Target Achieved %": "98.33"
       },
       "Survey Completed GPs": {
         "Physical (Target)": "667",
-        "Desktop/Physical": "5267/80",
-        "Target Achieved in Physical Survey%": "12"
+        "Desktop/Physical": "7517/758",
+        "Target Achieved in Physical Survey%": "87.99"
       },
       "Commissioned": {
-        "Milestones (May 25)": "1334",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "6437",
+        "GPs This Week": "-",
+        "SNOC": "CIVIL & ELECTRICAL  WORK IN PROGRESS",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
@@ -35,17 +41,23 @@
       "Active FTTH Connections": "19584",
       "HOTO Completed GPs": {
         "Target": "17214",
-        "Count": "9869",
-        "Target Achieved %": "66"
+        "Count": "11558",
+        "Target Achieved %": "67.14"
       },
       "Survey Completed GPs": {
         "Physical (Target)": "2154",
-        "Desktop/Physical": "9674 / 1331",
-        "Target Achieved in Physical Survey%": "62"
+        "Desktop/Physical": "14517 / 559",
+        "Target Achieved in Physical Survey%": "25.95"
       },
       "Commissioned": {
-        "Milestones (May 25)": "50",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "2315",
+        "GPs This Week": "-",
+        "SNOC": "Taget Skipped, Notice issued, Expected by 30.06.2025",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     },
     {
@@ -58,17 +70,23 @@
       "Active FTTH Connections": "18454",
       "HOTO Completed GPs": {
         "Target": "6225",
-        "Count": "4089",
-        "Target Achieved %": "66"
+        "Count": "5375",
+        "Target Achieved %": "86.35"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "2154",
-        "Desktop/Physical": "9674 / 1331",
-        "Target Achieved in Physical Survey%": "42"
+        "Physical (Target)": "811",
+        "Desktop/Physical": "3562 /880",
+        "Target Achieved in Physical Survey%": "108.51"
       },
       "Commissioned": {
-        "Milestones (May 25)": "60",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "1230",
+        "GPs This Week": "-",
+        "SNOC": "Taget Skipped, Notice issued, Expected by 30.06.2025",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
@@ -84,16 +102,22 @@
       "HOTO Completed GPs": {
         "Target": "126",
         "Count": "258",
-        "Target Achieved %": "205"
+        "Target Achieved %": "204.76"
       },
       "Survey Completed GPs": {
         "Physical (Target)": "181",
         "Desktop/Physical": "3615/258",
-        "Target Achieved in Physical Survey%": "64"
+        "Target Achieved in Physical Survey%": "142.54"
       },
       "Commissioned": {
-        "Milestones (May 25)": "362",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "208",
+        "GPs This Week": "-",
+        "SNOC": "CIVIL & ELECTRICAL  WORK IN PROGRESS",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
@@ -102,23 +126,29 @@
       "Package Number": 10,
       "PIA": "ITI",
       "GPs in Scope": {
-        "New/Upgraded": "688/2744",
-        "Total": "3412"
+        "New/Upgraded": "664/2676",
+        "Total": "3340"
       },
       "Active FTTH Connections": "45876",
       "HOTO Completed GPs": {
         "Target": "1372",
-        "Count": "1105",
-        "Target Achieved %": "81"
+        "Count": "1664",
+        "Target Achieved %": "121.28"
       },
       "Survey Completed GPs": {
         "Physical (Target)": "171",
-        "Desktop/Physical": "253/0",
-        "Target Achieved in Physical Survey%": "0"
+        "Desktop/Physical": "1664/22",
+        "Target Achieved in Physical Survey%": "12.87"
       },
       "Commissioned": {
-        "Milestones (May 25)": "341",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "1677",
+        "GPs This Week": "-",
+        "SNOC": "Dismenling Completed -Rennovation & Elcectrical Works Wiring in Progress",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
@@ -127,23 +157,29 @@
       "Package Number": 10,
       "PIA": "ITI",
       "GPs in Scope": {
-        "New/Upgraded": "688/2744",
-        "Total": "3412"
+        "New/Upgraded": "Apr-68",
+        "Total": "72"
       },
-      "Active FTTH Connections": "45876",
+      "Active FTTH Connections": "-",
       "HOTO Completed GPs": {
-        "Target": "1372",
-        "Count": "1105",
-        "Target Achieved %": "81"
+        "Target": "38",
+        "Count": "72",
+        "Target Achieved %": "189.47"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "171",
-        "Desktop/Physical": "253/0",
-        "Target Achieved in Physical Survey%": "0"
+        "Physical (Target)": "-",
+        "Desktop/Physical": "0/0",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "341",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "44",
+        "GPs This Week": "-",
+        "SNOC": "Dismenling Completed -Rennovation & Elcectrical Works Wiring in Progress",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
@@ -159,26 +195,32 @@
       "HOTO Completed GPs": {
         "Target": "4162",
         "Count": "808",
-        "Target Achieved %": "19"
+        "Target Achieved %": "19.41"
       },
       "Survey Completed GPs": {
         "Physical (Target)": "420",
-        "Desktop/Physical": "1656/23",
-        "Target Achieved in Physical Survey%": "0"
+        "Desktop/Physical": "2746/73",
+        "Target Achieved in Physical Survey%": "17.38"
       },
       "Commissioned": {
-        "Milestones (May 25)": "841",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "2591",
+        "GPs This Week": "-",
+        "SNOC": "1)Civil Work - Under Progress.\n2)Electrification :- Under progress.\n3)False Roofing    :- Near by Completed.\n4) Active Equipment:- BARCO video wall Material received , HP Workstation Material received.\n5) Transformer for Power extension is still pending for confirmation from BSNL.\n6)SNOC Fire Alarm system layout/ Door access control system Layout AC Layout/ Snoc Light layout/ Main power distribution/Voice/ data layout approval - pending.\n7)OEM make and model letter submitted -Approval pending from BSNL.\n",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
   "Madhya Pradesh": [
     {
       "Package Number": 1,
-      "PIA": "AWO Issued",
+      "PIA": "NCC",
       "GPs in Scope": {
-        "New/Upgraded": "5046/17850",
-        "Total": "22896"
+        "New/Upgraded": "5046/17812",
+        "Total": "22858"
       },
       "Active FTTH Connections": "35585",
       "HOTO Completed GPs": {
@@ -187,213 +229,267 @@
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "1145",
-        "Desktop/Physical": "-",
+        "Physical (Target)": "-",
+        "Desktop/Physical": "0/0",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "2290",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "1591",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
   "Dādra and Nagar Haveli and Damān and Diu": [
     {
       "Package Number": 1,
-      "PIA": "AWO Issued",
+      "PIA": "NCC",
       "GPs in Scope": {
-        "New/Upgraded": "5046/17850",
-        "Total": "22896"
+        "New/Upgraded": "0/38",
+        "Total": "38"
       },
       "Active FTTH Connections": "35585",
       "HOTO Completed GPs": {
-        "Target": "8925",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "1145",
-        "Desktop/Physical": "-",
+        "Physical (Target)": "-",
+        "Desktop/Physical": "0/0",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "2290",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "3",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
-  "Uttarakhand": [
+  "Uttaranchal": [
     {
       "Package Number": 5,
-      "PIA": "AWO Issued",
+      "PIA": "NCC",
       "GPs in Scope": {
         "New/Upgraded": "6118/1819",
         "Total": "7937"
       },
       "Active FTTH Connections": "14158",
       "HOTO Completed GPs": {
-        "Target": "910",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "397",
-        "Desktop/Physical": "-",
+        "Physical (Target)": "-",
+        "Desktop/Physical": "0/0",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "794",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "719",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
   "Jammu and Kashmir": [
     {
       "Package Number": 10,
-      "PIA": "AWO Issued",
+      "PIA": "AWO Issued / 26.03.2025",
       "GPs in Scope": {
-        "New/Upgraded": "4079/413",
-        "Total": "4492"
+        "New/Upgraded": "3886/413",
+        "Total": "4499"
       },
       "Active FTTH Connections": "4005",
       "HOTO Completed GPs": {
-        "Target": "207",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "225",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "449",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "393",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
   "Ladakh": [
     {
       "Package Number": 11,
-      "PIA": "AWO Issued",
+      "PIA": "AWO Issued / 26.03.2025",
       "GPs in Scope": {
-        "New/Upgraded": "4079/413",
-        "Total": "4492"
+        "New/Upgraded": "193/0",
+        "Total": "193"
       },
       "Active FTTH Connections": "4005",
       "HOTO Completed GPs": {
-        "Target": "207",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "225",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "449",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "0",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
   "Arunachal Pradesh": [
     {
       "Package Number": 7,
-      "PIA": "AWO Issued",
+      "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
         "New/Upgraded": "5394/508",
         "Total": "5902"
       },
       "Active FTTH Connections": "4150",
       "HOTO Completed GPs": {
-        "Target": "254",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "295",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "590",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "16",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
   "Nagaland": [
     {
       "Package Number": 7,
-      "PIA": "AWO Issued",
+      "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
         "New/Upgraded": "5394/508",
         "Total": "5902"
       },
       "Active FTTH Connections": "4150",
       "HOTO Completed GPs": {
-        "Target": "254",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "295",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "590",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "-",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
   "Manipur": [
     {
       "Package Number": 7,
-      "PIA": "AWO Issued",
+      "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
         "New/Upgraded": "5394/508",
         "Total": "5902"
       },
       "Active FTTH Connections": "4150",
       "HOTO Completed GPs": {
-        "Target": "254",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "295",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "590",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "14",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
   "Kerala": [
     {
       "Package Number": 16,
-      "PIA": "AWO Issued",
+      "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
         "New/Upgraded": "1/977",
         "Total": "978"
       },
       "Active FTTH Connections": "160127",
       "HOTO Completed GPs": {
-        "Target": "489",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "49",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "98",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "550",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
@@ -407,18 +503,24 @@
       },
       "Active FTTH Connections": "38616",
       "HOTO Completed GPs": {
-        "Target": "4373",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "568",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "1135",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "5811",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
@@ -432,18 +534,24 @@
       },
       "Active FTTH Connections": "116467",
       "HOTO Completed GPs": {
-        "Target": "3041",
-        "Count": "3209",
+        "Target": "-",
+        "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "323",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "616",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "1127",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
@@ -457,18 +565,24 @@
       },
       "Active FTTH Connections": "953",
       "HOTO Completed GPs": {
-        "Target": "381",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "191",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "382",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "5",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
@@ -482,18 +596,24 @@
       },
       "Active FTTH Connections": "953",
       "HOTO Completed GPs": {
-        "Target": "381",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "191",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "382",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "142",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
@@ -507,18 +627,24 @@
       },
       "Active FTTH Connections": "953",
       "HOTO Completed GPs": {
-        "Target": "381",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "191",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "382",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "6",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
@@ -532,93 +658,117 @@
       },
       "Active FTTH Connections": "3427",
       "HOTO Completed GPs": {
-        "Target": "751",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "133",
-        "Desktop/Physical": "5267/80",
+        "Physical (Target)": "-",
+        "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "267",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "212",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
   "Goa": [
     {
       "Package Number": 4,
-      "PIA": "AWO Issued",
+      "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
-        "New/Upgraded": "209/6182",
-        "Total": "6391"
+        "New/Upgraded": "191/0",
+        "Total": "191"
       },
       "Active FTTH Connections": "31436",
       "HOTO Completed GPs": {
-        "Target": "3091",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "320",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "639",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "-",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
   "Karnataka": [
     {
       "Package Number": 4,
-      "PIA": "AWO Issued",
+      "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
-        "New/Upgraded": "209/6182",
-        "Total": "6391"
+        "New/Upgraded": "Jun-84",
+        "Total": "6090"
       },
       "Active FTTH Connections": "31436",
       "HOTO Completed GPs": {
-        "Target": "3091",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "320",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "639",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "2279",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ],
   "Puducherry": [
     {
       "Package Number": 4,
-      "PIA": "AWO Issued",
+      "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
-        "New/Upgraded": "209/6182",
-        "Total": "6391"
+        "New/Upgraded": "Dec-98",
+        "Total": "110"
       },
       "Active FTTH Connections": "31436",
       "HOTO Completed GPs": {
-        "Target": "3091",
+        "Target": "-",
         "Count": "-",
         "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "320",
+        "Physical (Target)": "-",
         "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
-        "Milestones (May 25)": "639",
+        "Milestones (May 25)": "-",
         "Target Achieved %": "-"
+      },
+      "GP Deployment Metrics": {
+        "GPs > 98% Last Week": "78",
+        "GPs This Week": "-",
+        "SNOC": "-",
+        "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
   ]

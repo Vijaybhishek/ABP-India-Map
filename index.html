@@ -1,313 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <title>DEETS</title>
+  <title>DETAILED INFO OF STATES</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<style>
-
-  body {
-    margin: 0;
-    font-family: 'Times New Roman', serif;
-    background: linear-gradient(to bottom right, #ff9933, #ffffff, #138808); /* tricolour gradient */
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
-h1 {
-  font-size: 1.4rem;
-  color: #C14600;
-  font-family: 'Times New Roman', serif;
-  font-weight: bold;
-  margin: 0; /* removes gap inside the title box */
-}
-
-h2 {
-  font-size: 1.1rem;
-  color: #C14600;
-  font-family: 'Times New Roman', serif;
-  font-weight: bold;
-  margin: 0; /* removes gap inside the title box */
-}
-
-.title-box {
-  background: linear-gradient(135deg, #fffef5, #e6f9e6); /* theme-matching soft gradient */
-  padding: 8px 18px;
-  border-radius: 10px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  margin-bottom: 18px;
-  text-align: center;
-  display: inline-block;
-}
-
-.divider {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin: 6px auto;
-  width: 60%;
-  opacity: 1.0;
-}
-
-
-  .container {
-    display: flex;
-    width: 95%;
-    max-width: 1600px;
-    height: 285vh;
-    background: cream;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-  }
-
-#map {
-  flex: 2;
-  height: 100%;
-background: linear-gradient(to bottom right, #ffffff, #ccffcc); /* softer minty touch */
-  border-right: 1px solid #eee;
-  box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.05);
-}
-
-#legend {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 11px;              /* smaller text */
-  color: #333;
-  background: yellow;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-  padding: 3px 6px;             /* minimal padding */
-  margin: 0;
-  line-height: 0.8;
-  max-width: 140px;
-  z-index: 1000;
-  position: absolute;
-  bottom: 8px;                 /* tighter to bottom */
-  left: 15px;
-}
-
-/* Hover tooltip for state names */
-.state-tooltip {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: bold;
-  pointer-events: none;
-  z-index: 2000;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.state-tooltip.visible {
-  opacity: 1;
-}
-
-  #sidebar {
-    flex: 1.2;
-    background: #f0fff4; /* soft green background */
-    border-radius: 0 20px 20px 0;
-    display: flex;
-    flex-direction: column;
-    padding: 40px 30px 30px;
-    box-sizing: border-box;
-    overflow-y: auto;
-    font-size: 16px;
-    color: #333;
-  }
-
-  #info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-.info-title {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #CD5C08;
-  margin: 0 auto 10px;
-  text-align: center;
-  background: linear-gradient(135deg, #fffef5, #e6f9e6); /* super light orange to pale green */
-  padding: 6px 12px;
-  border-radius: 6px;
-  width: fit-content;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* even softer shadow */
-}
-
-.package-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #CD5C08;
-  margin: 0 auto 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #fffef5, #e6f9e6); /* same super light gradient */
-  padding: 6px 12px;
-  border-radius: 6px;
-  width: fit-content;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-}
-
-.info-card {
-  background: #ffffff;
-  padding: 20px;
-  border-left: 5px solid #ff9933; /* saffron highlight */
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: -10px; /* 👈 pulls it up slightly */
-}
-
-  @media (max-width: 768px) {
-    .container {
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(to bottom right, #ff9933, #ffffff, #138808);
+      /* tricolour gradient */
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
       flex-direction: column;
-      height: auto;
+      align-items: center;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      color: #C14600;
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+      margin: 0;
+      /* removes gap inside the title box */
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      color: #C14600;
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+      margin: 0;
+      /* removes gap inside the title box */
+    }
+
+    .title-box {
+      background: linear-gradient(135deg, #fffef5, #e6f9e6);
+      /* theme-matching soft gradient */
+      padding: 8px 18px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      margin-bottom: 18px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 6px auto;
+      width: 60%;
+      opacity: 1.0;
+    }
+
+
+    .container {
+      display: flex;
+      width: 95%;
+      max-width: 1600px;
+      height: 285vh;
+      background: cream;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
     }
 
     #map {
-      height: 1200px;
-      border-right: none;
-      border-bottom: 1px solid #eee;
+      flex: 2;
+      height: 100%;
+      background: linear-gradient(to bottom right, #ffffff, #ccffcc);
+      /* softer minty touch */
+      border-right: 1px solid #eee;
+      box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    #legend {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 11px;
+      /* smaller text */
+      color: #333;
+      background: yellow;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      padding: 3px 6px;
+      /* minimal padding */
+      margin: 0;
+      line-height: 0.8;
+      max-width: 140px;
+      z-index: 1000;
+      position: absolute;
+      bottom: 8px;
+      /* tighter to bottom */
+      left: 15px;
+    }
+
+    /* Hover tooltip for state names */
+    .state-tooltip {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      pointer-events: none;
+      z-index: 2000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .state-tooltip.visible {
+      opacity: 1;
     }
 
     #sidebar {
-      border-radius: 0 0 20px 20px;
+      flex: 1.2;
+      background: #f0fff4;
+      /* soft green background */
+      border-radius: 0 20px 20px 0;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 30px 30px;
+      box-sizing: border-box;
+      overflow-y: auto;
+      font-size: 16px;
+      color: #333;
     }
-  }
 
-.leaflet-interactive {
-  transition: fill 0.3s ease;
-  stroke: #333;
-  stroke-width: 1.5;
-}
+    #info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
 
-.leaflet-interactive:hover {
-  stroke: #000;
-  stroke-width: 3;
-  cursor: pointer;
-}
-#map-container {
-  position: relative;
-  flex: 2;
-  height: 100%;
-}
+    .info-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #CD5C08;
+      margin: 0 auto 10px;
+      text-align: center;
+      background: linear-gradient(135deg, #fffef5, #e6f9e6);
+      /* super light orange to pale green */
+      padding: 6px 12px;
+      border-radius: 6px;
+      width: fit-content;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+      /* even softer shadow */
+    }
 
-#search-container {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: 1000;
-}
+    .package-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #CD5C08;
+      margin: 0 auto 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #fffef5, #e6f9e6);
+      /* same super light gradient */
+      padding: 6px 12px;
+      border-radius: 6px;
+      width: fit-content;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    }
 
-.search-input-wrapper {
-  position: relative;
-  width: 140px; /* reduced width */
-  height: 32px; /* fixed height for alignment */
-}
+    .info-card {
+      background: #ffffff;
+      padding: 20px;
+      border-left: 5px solid #ff9933;
+      /* saffron highlight */
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: -10px;
+      /* 👈 pulls it up slightly */
+    }
 
-#state-search {
-  width: 100%;
-  height: 100%;
-  padding: 4px 8px 4px 28px; /* adjust for icon space */
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  outline: none;
-  box-sizing: border-box;
-}
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
 
-#state-search:focus {
-  border-color: #ff9933;
-  box-shadow: 0 2px 6px rgba(255, 153, 51, 0.3);
-}
+      #map {
+        height: 1200px;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+      }
 
-.search-icon {
-  position: absolute;
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 14px;
-  color: #888;
-  pointer-events: none;
-  height: 16px;
-  line-height: 16px;
-}
+      #sidebar {
+        border-radius: 0 0 20px 20px;
+      }
+    }
 
-.search-suggestions {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  border: 1px solid #ccc;
-  border-top: none;
-  border-radius: 0 0 6px 6px;
-  max-height: 180px;
-  overflow-y: auto;
-  z-index: 1001;
-  display: none;
-}
+    .leaflet-interactive {
+      transition: fill 0.3s ease;
+      stroke: #333;
+      stroke-width: 1.5;
+    }
 
-.search-suggestion {
-  padding: 7px 9px;
-  cursor: pointer;
-  border-bottom: 1px solid #eee;
-}
+    .leaflet-interactive:hover {
+      stroke: #000;
+      stroke-width: 3;
+      cursor: pointer;
+    }
 
-.search-suggestion:hover {
-  background-color: #f0fff4;
-}
+    #map-container {
+      position: relative;
+      flex: 2;
+      height: 100%;
+    }
 
-.search-suggestion:last-child {
-  border-bottom: none;
-}
+    #search-container {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+      width: 140px;
+      /* reduced width */
+      height: 32px;
+      /* fixed height for alignment */
+    }
+
+    #state-search {
+      width: 100%;
+      height: 100%;
+      padding: 4px 8px 4px 28px;
+      /* adjust for icon space */
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    #state-search:focus {
+      border-color: #ff9933;
+      box-shadow: 0 2px 6px rgba(255, 153, 51, 0.3);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: #888;
+      pointer-events: none;
+      height: 16px;
+      line-height: 16px;
+    }
+
+    .search-suggestions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 1px solid #ccc;
+      border-top: none;
+      border-radius: 0 0 6px 6px;
+      max-height: 180px;
+      overflow-y: auto;
+      z-index: 1001;
+      display: none;
+    }
+
+    .search-suggestion {
+      padding: 7px 9px;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+    }
+
+    .search-suggestion:hover {
+      background-color: #f0fff4;
+    }
+
+    .search-suggestion:last-child {
+      border-bottom: none;
+    }
 
 
-.highlighted-state {
-  stroke: #ff9933 !important;
-  stroke-width: 4 !important;
-  fill-opacity: 1 !important;
-}
-
-
-</style>
+    .highlighted-state {
+      stroke: #ff9933 !important;
+      stroke-width: 4 !important;
+      fill-opacity: 1 !important;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="title-box">
-
-  <h1>Ammended BharatNet Program - Deployment Overview </h1>
-  <hr class="divider">
-  <h2>A State-Wise Interactive Display of India's Digital Infrastructure Rollout</h2>
-
-</div>
+  <div class="title-box">
+    <h1>Ammended BharatNet Program - Deployment Overview </h1>
+    <hr class="divider">
+    <h2>A State-Wise Interactive Display of India's Digital Infrastructure Rollout</h2>
+  </div>
   <div class="container">
     <div id="map-container">
-<div id="search-container">
-  <div class="search-input-wrapper">
-    <input type="text" id="state-search" placeholder="Search for a state..." />
-    <span class="search-icon">&#128269;</span> <!-- Unicode search icon, or use Font Awesome/SVG -->
-  </div>
-  <div class="search-suggestions" id="search-suggestions"></div>
-</div>
+      <div id="search-container">
+        <div class="search-input-wrapper">
+          <input type="text" id="state-search" placeholder="Search for a state..." />
+          <span class="search-icon">&#128269;</span> <!-- Unicode search icon, or use Font Awesome/SVG -->
+        </div>
+        <div class="search-suggestions" id="search-suggestions"></div>
+      </div>
 
       <div id="map"></div>
     </div>
 
     <div id="sidebar">
-        
       <div id="info">
         <div class="info-title">State Information</div>
         <p style="text-align:center;">Click on any state to view information</p>
@@ -321,397 +335,103 @@ background: linear-gradient(to bottom right, #ffffff, #ccffcc); /* softer minty 
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
+    let stateInfo = {}; // will be populated from JSON
+
+    const map = L.map('map', {
+      center: [22.5, 78.9],
+      zoom: 5,
+      minZoom: 4,
+      maxZoom: 8,
+      zoomControl: true,
+      scrollWheelZoom: true,
+      maxBounds: [
+        [6.5, 67],  // Southwest corner of India
+        [37.5, 97.5]  // Northeast corner of India
+      ],
+      maxBoundsViscosity: 1.0 // Stops dragging outside bounds
+    });
 
 
-function loadMap(d){
+    // Updated color scheme based on your requirements
+    const stateColors = {
+      // Agreement Done 
+      "Punjab": "#28a745",
+      "Uttar Pradesh": "#28a745",
+      "Himachal Pradesh": "#28a745",
+      "West Bengal": "#28a745",
+      "Bihar": "#28a745",
+      "Andaman and Nicobar": "#28a745",
+      "Uttaranchal": "#28a745",
+      "Madhya Pradesh": "#28a745",
 
+      // AWO Signed
+      "Uttaranchal": "#E78B48",
+      "Jammu and Kashmir": "#E78B48",
+      "Ladakh": "#E78B48",
+      "Karnataka": "#E78B48",
+      "Goa": "#E78B48",
+      "Puducherry": "#E78B48",
+      "Kerala": "#E78B48",
+      "Arunachal Pradesh": "#E78B48",
+      "Nagaland": "#E78B48",
+      "Manipur": "#E78B48",
+      "Dādra and Nagar Haveli and Damān and Diu": "#E78B48",
 
-    const stateInfo=d;
-    let test = {
-   
-    "Punjab": [
-      {
-        "Package Number" : 12,
-        "PIA": "HFCL",
-        "Agreement Signing Date": "19-02-2025",
-        "GPs in Scope": { "New/Upgraded": "673/12,664", "Total": "13,337" },
-        "Active FTTH Connections": "1,78,933",
-        "HOTO Completed GPs": { "Target": "6,332" , "Count": "3,209" , "Target Achieved %": 51 },
-        "Survey Completed GPs": { "Physical (Target)": "667", "Desktop/Physical": "5267/80", "Target Achieved in Physical Survey %": "12" },
-        "Commissioned": { "Milestones (May 25)":"1334", "Target Achieved %": "-" }
-      }
-    ],
-    "Uttar Pradesh": [
-      {
-        "Package Number" : "3/UP(E)",
-        "PIA": "RVNL",
-        "GPs in Scope": { "New/Upgraded": "8,644/34,428" , "Total": 43072 },
-        "Active FTTH Connections":  "19,584" ,
-        "HOTO Completed GPs": { "Target": 17214, "Count": 9869, "Target Achieved %": 66 },
-        "Survey Completed GPs": { "Physical (Target)": " 2,154", "Desktop/Physical": "9674 / 1331", "Target Achieved in Physical Survey %": 62 },
-        "Commissioned": { "Milestones (May 25)": 50, "Target Achieved %": "-"  }
-      },
-      {
-        "Package Number" : "6/UP(W)",
-        "PIA": "RVNL",
-        "GPs in Scope": { "New/Uploaded": "3,769/12,449", "Total": "16,218" },
-        "Active FTTH Connections": "18,454" ,
-        "HOTO Completed GPs": { "Target": 6225, "Count": 4089, "Target Achieved %": 66 },
-        "Survey Completed GPs": { "Physical (Target)": " 2,154", "Desktop/Physical": "9674 / 1331", "Target Achieved in Physical Survey %": 42 },
-        "Commissioned": { "Milestones (May 25)": 60, "Target Achieved %": "-" }
-      }
-    ],
-    "Himachal Pradesh": [
-      {
-        "Package Number" : 9,
-        "PIA": "ITI",
-        "GPs in Scope": { "New/Upgraded": "3,363/252", "Total": "3,615" },
-        "Active FTTH Connections": "2,323",
-        "HOTO Completed GPs": { "Target": "126" , "Count": "258" , "Target Achieved %": 205 },
-        "Survey Completed GPs": { "Physical (Target)": "181", "Desktop/Physical": "3615/258", "Target Achieved in Physical Survey %": "64" },
-        "Commissioned": { "Milestones (May 25)":"362", "Target Achieved %": "-" }
-      }
-     ],
+      // Under consideration / Others
+      "Rajasthan": "#DA6C6C",
+      "Haryana": "#DA6C6C",
+      "Assam": "#DA6C6C",
+      "Mizoram": "#DA6C6C",
+      "Tripura": "#DA6C6C",
+      "Meghalaya": "#DA6C6C",
+      "Andhra Pradesh": "#DA6C6C",
+      "Telangana": "#DA6C6C",
+      "Tamil Nadu": "#DA6C6C",
+      "Maharashtra": "#DA6C6C",
+      "Gujarat": "#DA6C6C",
+      "Delhi": "#DA6C6C",
+      "Jharkhand": "#DA6C6C",
+      "Chhattisgarh": "#DA6C6C",
+      "Chandigarh": "#DA6C6C",
+      "Lakshadweep": "#DA6C6C",
+      "Orissa": "#DA6C6C",
+      "Sikkim": "#DA6C6C",
+    };
 
+    let geojsonLayer;
+    let allStates = [];
+    let currentHighlightedLayer = null;
+    const tooltip = document.getElementById('stateTooltip');
+    const searchInput = document.getElementById('state-search');
+    const suggestionsDiv = document.getElementById('search-suggestions');
 
-    "West Bengal": [
-      {
-        "Package Number" : 10,
-        "PIA": "ITI",
-        "GPs in Scope": { "New/Upgraded": "688/2,744", "Total": "3,412" },
-        "Active FTTH Connections": "45,876",
-        "HOTO Completed GPs": { "Target": "1,372" , "Count": "1,105" , "Target Achieved %": 81 },
-        "Survey Completed GPs": { "Physical (Target)": "171", "Desktop/Physical": "253/0", "Target Achieved in Physical Survey %": "0" },
-        "Commissioned": { "Milestones (May 25)":"341", "Target Achieved %": "-" }
-      }
-     ],
-
-    "Andaman and Nicobar": [
-      {
-        "Package Number" : 10,
-        "PIA": "ITI",
-        "GPs in Scope": { "New/Upgraded": "688/2,744", "Total": "3,412" },
-        "Active FTTH Connections": "45,876",
-        "HOTO Completed GPs": { "Target": "1,372" , "Count": "1,105" , "Target Achieved %": 81 },
-        "Survey Completed GPs": { "Physical (Target)": "171", "Desktop/Physical": "253/0", "Target Achieved in Physical Survey %": "0" },
-        "Commissioned": { "Milestones (May 25)":"341", "Target Achieved %": "-" }
-      }
-     ],
-    "Bihar": [
-      {
-        "Package Number" : 7,
-        "PIA": "PolyCab",
-        "GPs in Scope": { "New/Upgraded": "81/8,324", "Total": "8,405" },
-        "Active FTTH Connections": "29,493",
-        "HOTO Completed GPs": { "Target": "4,162" , "Count": "808" , "Target Achieved %": 19 },
-        "Survey Completed GPs": { "Physical (Target)": "420", "Desktop/Physical": "1656/23", "Target Achieved in Physical Survey %": "0" },
-        "Commissioned": { "Milestones (May 25)":"841", "Target Achieved %": "-" }
-      }
-     ],
-    "Madhya Pradesh": [
-      {
-        "Package Number" : 1,
-        "PIA": "AWO Issued",
-        "GPs in Scope": { "New/Upgraded": "5,046/17,850", "Total": "22,896" },
-        "Active FTTH Connections": "35,585",
-        "HOTO Completed GPs": { "Target": "8925" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "1145", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"2,290", "Target Achieved %": "-" }
-      }
-     ],
-    "Dādra and Nagar Haveli and Damān and Diu": [
-      {
-        "Package Number" : 1,
-        "PIA": "AWO Issued",
-        "GPs in Scope": { "New/Upgraded": "5,046/17,850", "Total": "22,896" },
-        "Active FTTH Connections": "35,585",
-        "HOTO Completed GPs": { "Target": "8925" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "1145", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"2,290", "Target Achieved %": "-" }
-      }
-     ],
-
-
-    "Uttarakhand": [
-      {
-        "Package Number" : 5,
-        "PIA": "AWO Issued",
-        "GPs in Scope": { "New/Upgraded": "6,118/1,819", "Total": "7,937" },
-        "Active FTTH Connections": "14,158",
-        "HOTO Completed GPs": { "Target": "910" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "397", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"794", "Target Achieved %": "-" }
-      }
-     ],
-    "Jammu and Kashmir": [
-      {
-        "Package Number" : 11,
-        "PIA": "AWO Issued",
-        "GPs in Scope": { "New/Upgraded": "4,079/413", "Total": "4,492" },
-        "Active FTTH Connections": "4,005",
-        "HOTO Completed GPs": { "Target": "207" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "225", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"449", "Target Achieved %": "-" }
-      }
-     ],
-    "Ladakh": [
-      {
-        "Package Number" : 11,
-        "PIA": "AWO Issued",
-        "GPs in Scope": { "New/Upgraded": "4,079/413", "Total": "4,492" },
-        "Active FTTH Connections": "4,005",
-        "HOTO Completed GPs": { "Target": "207" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "225", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"449", "Target Achieved %": "-" }
-      }
-     ],
-    "Arunachal Pradesh": [
-      {
-        "Package Number" : 7,
-        "PIA": "AWO Issued",
-        "GPs in Scope": { "New/Upgraded": "5394/508", "Total": "5902" },
-        "Active FTTH Connections": "4150",
-        "HOTO Completed GPs": { "Target": "254" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "295", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"590", "Target Achieved %": "-" }
-      }
-     ],
-
-    "Nagaland": [
-      {
-        "Package Number" : 7,
-        "PIA": "AWO Issued",
-        "GPs in Scope": { "New/Upgraded": "5394/508", "Total": "5902" },
-        "Active FTTH Connections": "4150",
-        "HOTO Completed GPs": { "Target": "254" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "295", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"590", "Target Achieved %": "-" }
-      }
-     ],
-
-    "Manipur": [
-      {
-        "Package Number" : 7,
-        "PIA": "AWO Issued",
-        "GPs in Scope": { "New/Upgraded": "5394/508", "Total": "5902" },
-        "Active FTTH Connections": "4150",
-        "HOTO Completed GPs": { "Target": "254" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "295", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"590", "Target Achieved %": "-" }
-      }
-     ],
-
-    "Kerala": [
-      {
-        "Package Number" : 16,
-        "PIA": "AWO Issued",
-        "GPs in Scope": { "New/Upgraded": "1/977", "Total": "978" },
-        "Active FTTH Connections": "1,60127",
-        "HOTO Completed GPs": { "Target": "489" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "49", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"98", "Target Achieved %": "-" }
-      }
-     ],
-    "Rajasthan": [
-      {
-        "Package Number" : 3,
-        "PIA": "--",
-        "GPs in Scope": { "New/Upgraded": "2,606/8,746 " , "Total": "11,352" },
-        "Active FTTH Connections": "38,616",
-        "HOTO Completed GPs": { "Target": "4,373" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "568", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"1,135", "Target Achieved %": "-" }
-      }
-     ],
-    "Haryana": [
-      {
-        "Package Number" : 13,
-        "PIA": "--",
-        "Agreement Signing Date": "19-02-2025",
-        "GPs in Scope": { "New/Upgraded": "174/6,082", "Total": "6,256" },
-        "Active FTTH Connections": "1,16,467",
-        "HOTO Completed GPs": { "Target": "3041" , "Count": "3,209" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "323", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"616", "Target Achieved %": "-" }
-      }
-     ],
-    "Mizoram": [
-      {
-        "Package Number" : 14,
-        "PIA": "--",
-        "GPs in Scope": { "New/Upgraded": "3,056/761", "Total": "3,817" },
-        "Active FTTH Connections": "953",
-        "HOTO Completed GPs": { "Target": "381" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "191", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"382", "Target Achieved %": "-" }
-      }
-     ],
-    "Tripura": [
-      {
-        "Package Number" : 14,
-        "PIA": "--",
-        "GPs in Scope": { "New/Upgraded": "3,056/761", "Total": "3,817" },
-        "Active FTTH Connections": "953",
-        "HOTO Completed GPs": { "Target": "381" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "191", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"382", "Target Achieved %": "-" }
-      }
-     ],
-    "Meghalaya": [
-      {
-        "Package Number" : 14,
-        "PIA": "--",
-        "GPs in Scope": { "New/Upgraded": "3,056/761", "Total": "3,817" },
-        "Active FTTH Connections": "953",
-        "HOTO Completed GPs": { "Target": "381" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "191", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"382", "Target Achieved %": "-" }
-      }
-     ],
-
-    "Assam": [
-      {
-        "Package Number" : 15,
-        "PIA": "--",
-        "Agreement Signing Date": "19-02-2025",
-        "GPs in Scope": { "New/Upgraded": "1,163/1,502", "Total": "2,665" },
-        "Active FTTH Connections": "3,427",
-        "HOTO Completed GPs": { "Target": "751" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "133", "Desktop/Physical": "5267/80", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"267", "Target Achieved %": "-" }
-      }
-     ],
-    "Goa": [
-      {
-        "Package Number" : 4,
-        "PIA": "AWO Issued",
-        "GPs in Scope": { "New/Upgraded": "209/6,182", "Total": "6,391" },
-        "Active FTTH Connections": " 31,436",
-        "HOTO Completed GPs": { "Target": "3,091" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "320", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"639", "Target Achieved %": "-" }
-      }
-     ],
-    "Karnataka": [
-      {
-        "Package Number" : 4,
-        "PIA": "AWO Issued",
-        "GPs in Scope": { "New/Upgraded": "209/6,182", "Total": "6,391" },
-        "Active FTTH Connections": " 31,436",
-        "HOTO Completed GPs": { "Target": "3,091" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "320", "Desktop/Physical": "-", "Target Achieved in Physical Survey%": "-" },
-        "Commissioned": { "Milestones (May 25)":"639", "Target Achieved %": "-" }
-      }
-     ],
-    "Puducherry": [
-      {
-        "Package Number" : 4,
-        "PIA": "AWO Issued",
-        "GPs in Scope": { "New/Upgraded": "209/6,182", "Total": "6,391" },
-        "Active FTTH Connections": " 31,436",
-        "HOTO Completed GPs": { "Target": "3,091" , "Count": "-" , "Target Achieved %": "-" },
-        "Survey Completed GPs": { "Physical (Target)": "320", "Desktop/Physical": "-", "Target Achieved in Physical Survey %": "-" },
-        "Commissioned": { "Milestones (May 25)":"639", "Target Achieved %": "-" }
-      }
-     ],
-  };
-
- 
-
-const map = L.map('map', {
-  center: [22.5, 78.9],
-  zoom: 5,
-  minZoom: 4,
-  maxZoom: 8,
-  zoomControl: true,
-  scrollWheelZoom: true,
-  maxBounds: [
-    [6.5, 67],  // Southwest corner of India
-    [37.5, 97.5]  // Northeast corner of India
-  ],
-  maxBoundsViscosity: 1.0 // Stops dragging outside bounds
-});
-
-
-  // Updated color scheme based on your requirements
-  const stateColors = {
-    // Agreement Done 
-    "Punjab": "#28a745",
-    "Uttar Pradesh": "#28a745", 
-    "Himachal Pradesh": "#28a745",
-    "West Bengal": "#28a745",
-    "Bihar": "#28a745",
-    "Andaman and Nicobar": "#28a745",
-    "Uttaranchal": "#28a745",
-    "Madhya Pradesh": "#28a745",
-
-    // AWO Signed
-    "Uttaranchal": "#E78B48",
-    "Jammu and Kashmir": "#E78B48",
-    "Ladakh": "#E78B48",
-    "Karnataka": "#E78B48",
-    "Goa": "#E78B48",
-    "Puducherry": "#E78B48",
-    "Kerala": "#E78B48",
-    "Arunachal Pradesh": "#E78B48",
-    "Nagaland": "#E78B48",
-    "Manipur": "#E78B48",
-    "Dādra and Nagar Haveli and Damān and Diu": "#E78B48",
-
-    // Under consideration / Others
-    "Rajasthan": "#DA6C6C",
-    "Haryana": "#DA6C6C",
-    "Assam": "#DA6C6C",
-    "Mizoram": "#DA6C6C",
-    "Tripura": "#DA6C6C",
-    "Meghalaya":"#DA6C6C",
-    "Andhra Pradesh": "#DA6C6C",
-    "Telangana": "#DA6C6C",
-    "Tamil Nadu": "#DA6C6C",
-    "Maharashtra": "#DA6C6C",
-    "Gujarat": "#DA6C6C",
-    "Delhi": "#DA6C6C",
-    "Jharkhand": "#DA6C6C",
-    "Chhattisgarh": "#DA6C6C",
-    "Chandigarh": "#DA6C6C",
-    "Lakshadweep": "#DA6C6C",
-    "Orissa": "#DA6C6C",
-    "Sikkim": "#DA6C6C",
-  };
-
-  let geojsonLayer;
-  let allStates = [];
-  let currentHighlightedLayer = null;
-  const tooltip = document.getElementById('stateTooltip');
-  const searchInput = document.getElementById('state-search');
-  const suggestionsDiv = document.getElementById('search-suggestions');
-
-  function getStateColor(stateName) {
-    return stateColors[stateName] || "#bdc3c7"; // default grey if state not found
-  }
-
-  function displayStateInfo(name) {
-
-    const infoDiv = document.getElementById("info");
-    const packages = stateInfo[name] || [];
-    console.log(packages)
-
-    if (packages.length === 0) {
-      infoDiv.innerHTML = `<div class="info-title">State Information</div><div class="package-name">${name}</div><p style="text-align:center;">No data available for ${name}</p>`;
-      return;
+    function getStateColor(stateName) {
+      return stateColors[stateName] || "#bdc3c7"; // default grey if state not found
     }
 
-    let html = `<div class="info-title">State Information</div>`;
-    html += `<div class="package-name">${name}</div>`;
+    function displayStateInfo(name) {
+      const infoDiv = document.getElementById("info");
+      const packages = stateInfo[name] || [];
 
-    packages.forEach((info, index) => {
-      const gpsScope = info["GPs in Scope"] || {};
-      const hotos = info["HOTO Completed GPs"] || {};
-      const surveys = info["Survey Completed GPs"] || {};
-      const commissioned = info["Commissioned"] || {};
+      if (packages.length === 0) {
+        infoDiv.innerHTML = `<div class="info-title">State Information</div><div class="package-name">${name}</div><p style="text-align:center;">No data available for ${name}</p>`;
+        return;
+      }
 
-      html += `
+      let html = `<div class="info-title">State Information</div>`;
+      html += `<div class="package-name">${name}</div>`;
+
+      packages.forEach((info, index) => {
+        const gpsScope = info["GPs in Scope"] || {};
+        const hotos = info["HOTO Completed GPs"] || {};
+        const surveys = info["Survey Completed GPs"] || {};
+        const commissioned = info["Commissioned"] || {};
+        const gpdeploymentmetrics = info["GP Deployment Metrics"] || {};
+        console.log("hotos", hotos)
+
+        html += `
 <div class="info-card">
+  <div class="info-card">
   <p><strong>Package Number ${info["Package Number"] ? " - " + info["Package Number"] : ""}</strong></p>
   <p><strong>PIA:</strong> ${info["PIA"]}</p>
   <p><strong>GPs in Scope:</strong></p>
@@ -725,270 +445,266 @@ const map = L.map('map', {
   <p><strong>Survey Completed GPs:</strong></p>
   <p>&nbsp;&nbsp;&nbsp;&nbsp;Desktop/Physical: ${surveys["Desktop/Physical"] || "-"}</p>
   <p>&nbsp;&nbsp;&nbsp;&nbsp;Physical (Target): ${surveys["Physical (Target)"] || "-"}</p>
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;Target Achieved in Physical Survey (%): ${surveys["Target Achieved in Physical Survey %"] || "-"}</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;Target Achieved in Physical Survey (%): ${surveys["Target Achieved in Physical Survey%"] || "-"}</p>
   <p><strong>Commissioned (in ring and visible):</strong></p>
   <p>&nbsp;&nbsp;&nbsp;&nbsp;Milestones (May 25): ${commissioned["Milestones (May 25)"] || "-"}</p>
   <p>&nbsp;&nbsp;&nbsp;&nbsp;Target Achieved (%): ${commissioned["Target Achieved %"] || "-"}</p>
+  <p><strong>GP Deployment Metrics:</strong></p>
+ <p>    GPs > 98% Last Week: ${gpdeploymentmetrics["GPs > 98% Last Week"] || "-"}</p>
+  <p>    GPs This Week: ${gpdeploymentmetrics["GPs This Week"] || "-"}</p>
+
+  <p>    SNOC: ${gpdeploymentmetrics["SNOC"] || "-"}</p>
+  <p>    No. of GPs (Dedicated Electric Connection): ${info["No. of GPs (Dedicated Electric Connection)"] || "-"}</p>
 </div>
         `;
-    });
+      });
 
-    infoDiv.innerHTML = html;
-  }
-
-  function highlightState(stateName) {
-    // Remove previous highlight
-    if (currentHighlightedLayer) {
-      geojsonLayer.resetStyle(currentHighlightedLayer);
+      infoDiv.innerHTML = html;
     }
 
-    // Find and highlight the new state
-    geojsonLayer.eachLayer(function(layer) {
-      // Try different possible property names for state names
-      const rawName = layer.feature.properties.NAME_1 || 
-                     layer.feature.properties.name || 
-                     layer.feature.properties.NAME || 
-                     layer.feature.properties.state || 
-                     layer.feature.properties.STATE || 
-                     layer.feature.properties.state_name ||
-                     layer.feature.properties.STATE_NAME ||
-                     "Unknown State";
-      const name = (rawName === "Uttar Pradesh East" || rawName === "Uttar Pradesh West") ? "Uttar Pradesh" : rawName;
-      
-      if (name === stateName) {
-        layer.setStyle({
-          weight: 4,
-          color: "#ff9933",
-          fillColor: getStateColor(name),
-          fillOpacity: 1,
-          dashArray: '',
-        });
-        
-        // Pan to the state
-        map.fitBounds(layer.getBounds(), { padding: [20, 20] });
-        
-        // Display state info
-        displayStateInfo(name);
-        
-        currentHighlightedLayer = layer;
-        return;
+    function highlightState(stateName) {
+      // Remove previous highlight
+      if (currentHighlightedLayer) {
+        geojsonLayer.resetStyle(currentHighlightedLayer);
       }
-    });
-  }
 
-  function onEachFeature(feature, layer) {
-    // Try different possible property names for state names
-    let rawName = feature.properties.NAME_1 || 
-                  feature.properties.name || 
-                  feature.properties.NAME || 
-                  feature.properties.state || 
-                  feature.properties.STATE || 
-                  feature.properties.state_name ||
-                  feature.properties.STATE_NAME ||
-                  "Unknown State";
-    let name = (rawName === "Uttar Pradesh East" || rawName === "Uttar Pradesh West") ? "Uttar Pradesh" : rawName;
+      // Find and highlight the new state
+      geojsonLayer.eachLayer(function (layer) {
+        // Try different possible property names for state names
+        const rawName = layer.feature.properties.NAME_1 ||
+          layer.feature.properties.name ||
+          layer.feature.properties.NAME ||
+          layer.feature.properties.state ||
+          layer.feature.properties.STATE ||
+          layer.feature.properties.state_name ||
+          layer.feature.properties.STATE_NAME ||
+          "Unknown State";
+        const name = (rawName === "Uttar Pradesh East" || rawName === "Uttar Pradesh West") ? "Uttar Pradesh" : rawName;
 
-    layer.on({
-      mouseover: function (e) {
-        // Don't change style if this is the highlighted state
-        if (currentHighlightedLayer !== e.target) {
-          const currentColor = getStateColor(name);
-          e.target.setStyle({
-            weight: 3,
-            color: "#000",
-            fillColor: currentColor,
-            fillOpacity: 0.9,
+        if (name === stateName) {
+          layer.setStyle({
+            weight: 4,
+            color: "#ff9933",
+            fillColor: getStateColor(name),
+            fillOpacity: 1,
             dashArray: '',
           });
+
+          // Pan to the state
+          map.fitBounds(layer.getBounds(), { padding: [20, 20] });
+
+          // Display state info
+          displayStateInfo(name);
+
+          currentHighlightedLayer = layer;
+          return;
         }
-        
-        // Show tooltip with state name
-        tooltip.innerHTML = name;
-        tooltip.classList.add('visible');
-        
-        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-          e.target.bringToFront();
-        }
-      },
-      mousemove: function(e) {
-        // Update tooltip position
-        tooltip.style.left = (e.originalEvent.pageX + 10) + 'px';
-        tooltip.style.top = (e.originalEvent.pageY - 30) + 'px';
-      },
-      mouseout: function (e) {
-        // Don't reset style if this is the highlighted state
-        if (currentHighlightedLayer !== e.target) {
-          geojsonLayer.resetStyle(e.target);
-        }
-        // Hide tooltip
-        tooltip.classList.remove('visible');
-      },
-      click: function () {
-        highlightState(name);
-      }
-    });
-  }
-
-  // Search functionality
-  function filterStates(searchTerm) {
-    if (!searchTerm.trim()) {
-      suggestionsDiv.style.display = 'none';
-      return;
-    }
-
-    const filtered = allStates.filter(state => 
-      state.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-
-    if (filtered.length === 0) {
-      suggestionsDiv.style.display = 'none';
-      return;
-    }
-
-    let html = '';
-    filtered.forEach(state => {
-      html += `<div class="search-suggestion" data-state="${state}">${state}</div>`;
-    });
-
-    suggestionsDiv.innerHTML = html;
-    suggestionsDiv.style.display = 'block';
-  }
-
-  // Event listeners for search
-  searchInput.addEventListener('input', function(e) {
-    filterStates(e.target.value);
-  });
-
-  searchInput.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
-      const searchTerm = e.target.value.trim();
-      const matchedState = allStates.find(state => 
-        state.toLowerCase() === searchTerm.toLowerCase()
-      );
-      
-      if (matchedState) {
-        highlightState(matchedState);
-        suggestionsDiv.style.display = 'none';
-        searchInput.value = matchedState;
-      }
-    }
-  });
-
-  // Click on suggestions
-  suggestionsDiv.addEventListener('click', function(e) {
-    if (e.target.classList.contains('search-suggestion')) {
-      const stateName = e.target.getAttribute('data-state');
-      highlightState(stateName);
-      searchInput.value = stateName;
-      suggestionsDiv.style.display = 'none';
-    }
-  });
-
-  // Hide suggestions when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!searchInput.contains(e.target) && !suggestionsDiv.contains(e.target)) {
-      suggestionsDiv.style.display = 'none';
-    }
-  });
-
-  fetch("in.geojson")
-    .then(res => res.json())
-    .then(data => {
-      // Debug: Log the first feature to see available properties
-      console.log("Available properties:", Object.keys(data.features[0].properties));
-      console.log("Sample feature:", data.features[0].properties);
-      
-      // Extract unique state names for search
-      const stateNames = new Set();
-      data.features.forEach(feature => {
-        // Try different possible property names for state names
-        const rawName = feature.properties.NAME_1 || 
-                       feature.properties.name || 
-                       feature.properties.NAME || 
-                       feature.properties.state || 
-                       feature.properties.STATE || 
-                       feature.properties.state_name ||
-                       feature.properties.STATE_NAME ||
-                       "Unknown State";
-        const name = (rawName === "Uttar Pradesh East" || rawName === "Uttar Pradesh West") ? "Uttar Pradesh" : rawName;
-        stateNames.add(name);
       });
-      allStates = Array.from(stateNames).sort();
-
-      geojsonLayer = L.geoJSON(data, {
-        style: function (feature) {
-          // Try different possible property names for state names
-          const rawName = feature.properties.NAME_1 || 
-                         feature.properties.name || 
-                         feature.properties.NAME || 
-                         feature.properties.state || 
-                         feature.properties.STATE || 
-                         feature.properties.state_name ||
-                         feature.properties.STATE_NAME ||
-                         "Unknown State";
-          const name = (rawName === "Uttar Pradesh East" || rawName === "Uttar Pradesh West") ? "Uttar Pradesh" : rawName;
-          
-          return {
-            color: "#2c3e50",
-            weight: 1.5,
-            fillColor: getStateColor(name),
-            fillOpacity: 0.8
-          };
-        },
-        onEachFeature: onEachFeature
-      }).addTo(map);
-
-      map.fitBounds(geojsonLayer.getBounds());
-    })
-    .catch(err => {
-      console.error("Failed to load GeoJSON:", err);
-      document.getElementById("info").innerHTML = `<p style="color:red; text-align:center;">Failed to load map data.</p>`;
-    });
-}
-
-   
-
-
- 
-    function loadJSON() {
-      fetch('mapdata.json')  // <-- Change this to your actual file path
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(data => {
-           loadMap(data)
-
-        })
-        .catch(error => {
-          document.getElementById('output').textContent = 'Error: ' + error;
-        });
     }
- 
-loadJSON();
 
-</script>
+    function onEachFeature(feature, layer) {
+      // Try different possible property names for state names
+      let rawName = feature.properties.NAME_1 ||
+        feature.properties.name ||
+        feature.properties.NAME ||
+        feature.properties.state ||
+        feature.properties.STATE ||
+        feature.properties.state_name ||
+        feature.properties.STATE_NAME ||
+        "Unknown State";
+      let name = (rawName === "Uttar Pradesh East" || rawName === "Uttar Pradesh West") ? "Uttar Pradesh" : rawName;
 
-<div id="legend" style="position: absolute; bottom: 20px; left: 53px; background: rgba(255,255,255,0.98); padding: 8px 12px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-size: 10px; max-width: 170px; border: 1px solid rgba(200,200,200,0.3);">
-  <strong style="font-size: 12px; color: #2c3e50; display: block; margin-bottom: 6px;">🗺️ States</strong>
-  
-  <div style="margin-bottom: 4px; display: flex; align-items: center;">
-    <span style="display:inline-block; width: 10px; height: 10px; background:#28a745; margin-right: 8px; border-radius: 50%; box-shadow: 0 1px 2px rgba(0,0,0,0.1);"></span> 
-    <span style="font-size: 10px;">Working</span>
+      layer.on({
+        mouseover: function (e) {
+          // Don't change style if this is the highlighted state
+          if (currentHighlightedLayer !== e.target) {
+            const currentColor = getStateColor(name);
+            e.target.setStyle({
+              weight: 3,
+              color: "#000",
+              fillColor: currentColor,
+              fillOpacity: 0.9,
+              dashArray: '',
+            });
+          }
+
+          // Show tooltip with state name
+          tooltip.innerHTML = name;
+          tooltip.classList.add('visible');
+
+          if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+            e.target.bringToFront();
+          }
+        },
+        mousemove: function (e) {
+          // Update tooltip position
+          tooltip.style.left = (e.originalEvent.pageX + 10) + 'px';
+          tooltip.style.top = (e.originalEvent.pageY - 30) + 'px';
+        },
+        mouseout: function (e) {
+          // Don't reset style if this is the highlighted state
+          if (currentHighlightedLayer !== e.target) {
+            geojsonLayer.resetStyle(e.target);
+          }
+          // Hide tooltip
+          tooltip.classList.remove('visible');
+        },
+        click: function () {
+          highlightState(name);
+        }
+      });
+    }
+
+    // Search functionality
+    function filterStates(searchTerm) {
+      if (!searchTerm.trim()) {
+        suggestionsDiv.style.display = 'none';
+        return;
+      }
+
+      const filtered = allStates.filter(state =>
+        state.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+
+      if (filtered.length === 0) {
+        suggestionsDiv.style.display = 'none';
+        return;
+      }
+
+      let html = '';
+      filtered.forEach(state => {
+        html += `<div class="search-suggestion" data-state="${state}">${state}</div>`;
+      });
+
+      suggestionsDiv.innerHTML = html;
+      suggestionsDiv.style.display = 'block';
+    }
+
+    // Event listeners for search
+    searchInput.addEventListener('input', function (e) {
+      filterStates(e.target.value);
+    });
+
+    searchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        const searchTerm = e.target.value.trim();
+        const matchedState = allStates.find(state =>
+          state.toLowerCase() === searchTerm.toLowerCase()
+        );
+
+        if (matchedState) {
+          highlightState(matchedState);
+          suggestionsDiv.style.display = 'none';
+          searchInput.value = matchedState;
+        }
+      }
+    });
+
+    // Click on suggestions
+    suggestionsDiv.addEventListener('click', function (e) {
+      if (e.target.classList.contains('search-suggestion')) {
+        const stateName = e.target.getAttribute('data-state');
+        highlightState(stateName);
+        searchInput.value = stateName;
+        suggestionsDiv.style.display = 'none';
+      }
+    });
+
+    // Hide suggestions when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!searchInput.contains(e.target) && !suggestionsDiv.contains(e.target)) {
+        suggestionsDiv.style.display = 'none';
+      }
+    });
+
+    fetch("mapdata.json")
+      .then(res => res.json())
+      .then(data => {
+        stateInfo = data;
+      })
+      .catch(err => {
+        console.error("Failed to load state data from mapdata.json", err);
+      });
+
+    fetch("in.geojson")
+      .then(res => res.json())
+      .then(data => {
+        // Debug: Log the first feature to see available properties
+        console.log("Available properties:", Object.keys(data.features[0].properties));
+        console.log("Sample feature:", data.features[0].properties);
+
+        // Extract unique state names for search
+        const stateNames = new Set();
+        data.features.forEach(feature => {
+          // Try different possible property names for state names
+          const rawName = feature.properties.NAME_1 ||
+            feature.properties.name ||
+            feature.properties.NAME ||
+            feature.properties.state ||
+            feature.properties.STATE ||
+            feature.properties.state_name ||
+            feature.properties.STATE_NAME ||
+            "Unknown State";
+          const name = (rawName === "Uttar Pradesh East" || rawName === "Uttar Pradesh West") ? "Uttar Pradesh" : rawName;
+          stateNames.add(name);
+        });
+        allStates = Array.from(stateNames).sort();
+
+        geojsonLayer = L.geoJSON(data, {
+          style: function (feature) {
+            // Try different possible property names for state names
+            const rawName = feature.properties.NAME_1 ||
+              feature.properties.name ||
+              feature.properties.NAME ||
+              feature.properties.state ||
+              feature.properties.STATE ||
+              feature.properties.state_name ||
+              feature.properties.STATE_NAME ||
+              "Unknown State";
+            const name = (rawName === "Uttar Pradesh East" || rawName === "Uttar Pradesh West") ? "Uttar Pradesh" : rawName;
+
+            return {
+              color: "#2c3e50",
+              weight: 1.5,
+              fillColor: getStateColor(name),
+              fillOpacity: 0.8
+            };
+          },
+          onEachFeature: onEachFeature
+        }).addTo(map);
+
+        map.fitBounds(geojsonLayer.getBounds());
+      })
+      .catch(err => {
+        console.error("Failed to load GeoJSON:", err);
+        document.getElementById("info").innerHTML = `<p style="color:red; text-align:center;">Failed to load map data.</p>`;
+      });
+  </script>
+
+  <div id="legend"
+    style="position: absolute; bottom: 20px; left: 53px; background: rgba(255,255,255,0.98); padding: 8px 12px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-size: 10px; max-width: 170px; border: 1px solid rgba(200,200,200,0.3);">
+    <strong style="font-size: 12px; color: #2c3e50; display: block; margin-bottom: 6px;">🗺️ States</strong>
+
+    <div style="margin-bottom: 4px; display: flex; align-items: center;">
+      <span
+        style="display:inline-block; width: 10px; height: 10px; background:#28a745; margin-right: 8px; border-radius: 50%; box-shadow: 0 1px 2px rgba(0,0,0,0.1);"></span>
+      <span style="font-size: 10px;">Working</span>
+    </div>
+
+    <div style="margin-bottom: 4px; display: flex; align-items: center;">
+      <span
+        style="display:inline-block; width: 10px; height: 10px; background:#ffa07a; margin-right: 8px; border-radius: 50%; box-shadow: 0 1px 2px rgba(0,0,0,0.1);"></span>
+      <span style="font-size: 10px;">AWO Issued</span>
+    </div>
+
+    <div style="margin-bottom: 0; display: flex; align-items: center;">
+      <span
+        style="display:inline-block; width: 10px; height: 10px; background:#DA6C6C; margin-right: 8px; border-radius: 50%; box-shadow: 0 1px 2px rgba(0,0,0,0.1);"></span>
+      <span style="font-size: 10px;">Under Consideration</span>
+    </div>
   </div>
-  
-  <div style="margin-bottom: 4px; display: flex; align-items: center;">
-    <span style="display:inline-block; width: 10px; height: 10px; background:#ffa07a; margin-right: 8px; border-radius: 50%; box-shadow: 0 1px 2px rgba(0,0,0,0.1);"></span> 
-    <span style="font-size: 10px;">AWO Issued</span>
   </div>
-  
-  <div style="margin-bottom: 0; display: flex; align-items: center;">
-    <span style="display:inline-block; width: 10px; height: 10px; background:#DA6C6C; margin-right: 8px; border-radius: 50%; box-shadow: 0 1px 2px rgba(0,0,0,0.1);"></span> 
-    <span style="font-size: 10px;">Under Consideration</span>
   </div>
-</div></div>
-</div>
 </body>
+
 </html>
