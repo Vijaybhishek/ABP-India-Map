@@ -92,7 +92,7 @@
   ],
   "Himachal Pradesh": [
     {
-      "Package Number": 9,
+      "Package Number": 8,
       "PIA": "ITI",
       "GPs in Scope": {
         "New/Upgraded": "3363/252",
@@ -123,7 +123,7 @@
   ],
   "West Bengal": [
     {
-      "Package Number": 10,
+      "Package Number": 9,
       "PIA": "ITI",
       "GPs in Scope": {
         "New/Upgraded": "664/2676",
@@ -154,7 +154,7 @@
   ],
   "Andaman and Nicobar": [
     {
-      "Package Number": 10,
+      "Package Number": 9,
       "PIA": "ITI",
       "GPs in Scope": {
         "New/Upgraded": "Apr-68",
@@ -309,7 +309,7 @@
   ],
   "Jammu and Kashmir": [
     {
-      "Package Number": 10,
+      "Package Number": 13,
       "PIA": "AWO Issued / 26.03.2025",
       "GPs in Scope": {
         "New/Upgraded": "3886/413",
@@ -340,7 +340,7 @@
   ],
   "Ladakh": [
     {
-      "Package Number": 11,
+      "Package Number": 13,
       "PIA": "AWO Issued / 26.03.2025",
       "GPs in Scope": {
         "New/Upgraded": "193/0",
@@ -371,7 +371,7 @@
   ],
   "Arunachal Pradesh": [
     {
-      "Package Number": 7,
+      "Package Number": 15,
       "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
         "New/Upgraded": "5394/508",
@@ -402,7 +402,7 @@
   ],
   "Nagaland": [
     {
-      "Package Number": 7,
+      "Package Number": 15,
       "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
         "New/Upgraded": "5394/508",
@@ -433,7 +433,7 @@
   ],
   "Manipur": [
     {
-      "Package Number": 7,
+      "Package Number": 15,
       "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
         "New/Upgraded": "5394/508",
@@ -495,7 +495,7 @@
   ],
   "Rajasthan": [
     {
-      "Package Number": 3,
+      "Package Number": 2,
       "PIA": "--",
       "GPs in Scope": {
         "New/Upgraded": "2606/8746",
@@ -526,7 +526,7 @@
   ],
   "Haryana": [
     {
-      "Package Number": 13,
+      "Package Number": 10,
       "PIA": "--",
       "GPs in Scope": {
         "New/Upgraded": "174/6082",
@@ -557,7 +557,7 @@
   ],
   "Mizoram": [
     {
-      "Package Number": 14,
+      "Package Number": 11,
       "PIA": "--",
       "GPs in Scope": {
         "New/Upgraded": "3056/761",
@@ -588,7 +588,7 @@
   ],
   "Tripura": [
     {
-      "Package Number": 14,
+      "Package Number": 11,
       "PIA": "--",
       "GPs in Scope": {
         "New/Upgraded": "3056/761",
@@ -619,7 +619,7 @@
   ],
   "Meghalaya": [
     {
-      "Package Number": 14,
+      "Package Number": 11,
       "PIA": "--",
       "GPs in Scope": {
         "New/Upgraded": "3056/761",
@@ -650,7 +650,7 @@
   ],
   "Assam": [
     {
-      "Package Number": 15,
+      "Package Number": 14,
       "PIA": "--",
       "GPs in Scope": {
         "New/Upgraded": "1163/1502",
