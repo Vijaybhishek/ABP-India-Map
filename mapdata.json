@@ -41,8 +41,8 @@
       "Active FTTH Connections": "19584",
       "HOTO Completed GPs": {
         "Target": "17214",
-        "Count": "11558",
-        "Target Achieved %": "67.14"
+        "Count": "11858",
+        "Target Achieved %": "68.8"
       },
       "Survey Completed GPs": {
         "Physical (Target)": "2154",
@@ -157,7 +157,7 @@
       "Package Number": 9,
       "PIA": "ITI (25-02-2025)",
       "GPs in Scope": {
-        "New/Upgraded": "Apr-68",
+        "New/Upgraded": "4/68",
         "Total": "72"
       },
       "Active FTTH Connections": "-",
@@ -715,7 +715,7 @@
       "Package Number": 4,
       "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
-        "New/Upgraded": "Jun-84",
+        "New/Upgraded": "6/6084",
         "Total": "6090"
       },
       "Active FTTH Connections": "31436",
@@ -746,7 +746,7 @@
       "Package Number": 4,
       "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
-        "New/Upgraded": "Dec-98",
+        "New/Upgraded": "12/98",
         "Total": "110"
       },
       "Active FTTH Connections": "31436",
