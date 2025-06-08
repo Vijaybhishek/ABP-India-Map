@@ -16,7 +16,7 @@
       "Survey Completed GPs": {
         "Physical (Target)": "667",
         "Desktop/Physical": "7517/758",
-        "Target Achieved in Physical Survey%": "113.64"
+        "Target Achieved in Physical Survey%": "113.6431784"
       },
       "Commissioned": {
         "Milestones (May 25)": "-",
@@ -24,7 +24,7 @@
       },
       "GP Deployment Metrics": {
         "GPs > 98% Last Week": "6437",
-        "GPs This Week": "7133",
+        "GPs This Week": "-",
         "SNOC": "CIVIL & ELECTRICAL  WORK IN PROGRESS",
         "No. of GPs (Dedicated Electric Connection)": "-"
       }
@@ -55,7 +55,7 @@
       },
       "GP Deployment Metrics": {
         "GPs > 98% Last Week": "2315",
-        "GPs This Week": "2330",
+        "GPs This Week": "-",
         "SNOC": "Taget Skipped, Notice issued, Expected by 30.06.2025",
         "No. of GPs (Dedicated Electric Connection)": "-"
       }
@@ -84,7 +84,7 @@
       },
       "GP Deployment Metrics": {
         "GPs > 98% Last Week": "1230",
-        "GPs This Week": "1269",
+        "GPs This Week": "-",
         "SNOC": "Taget Skipped, Notice issued, Expected by 30.06.2025",
         "No. of GPs (Dedicated Electric Connection)": "-"
       }
@@ -115,7 +115,7 @@
       },
       "GP Deployment Metrics": {
         "GPs > 98% Last Week": "208",
-        "GPs This Week": "225",
+        "GPs This Week": "-",
         "SNOC": "CIVIL & ELECTRICAL  WORK IN PROGRESS",
         "No. of GPs (Dedicated Electric Connection)": "-"
       }
@@ -146,7 +146,7 @@
       },
       "GP Deployment Metrics": {
         "GPs > 98% Last Week": "1677",
-        "GPs This Week": "1753",
+        "GPs This Week": "-",
         "SNOC": "Dismenling Completed -Rennovation & Elcectrical Works Wiring in Progress",
         "No. of GPs (Dedicated Electric Connection)": "-"
       }
@@ -157,7 +157,7 @@
       "Package Number": 9,
       "PIA": "ITI (25-02-2025)",
       "GPs in Scope": {
-        "New/Upgraded": "4/68",
+        "New/Upgraded": "Apr-68",
         "Total": "72"
       },
       "Active FTTH Connections": "-",
@@ -177,7 +177,7 @@
       },
       "GP Deployment Metrics": {
         "GPs > 98% Last Week": "44",
-        "GPs This Week": "35",
+        "GPs This Week": "-",
         "SNOC": "Dismenling Completed -Rennovation & Elcectrical Works Wiring in Progress",
         "No. of GPs (Dedicated Electric Connection)": "-"
       }
@@ -186,7 +186,7 @@
   "Bihar": [
     {
       "Package Number": 7,
-      "PIA": "Polycab (12-03-2025)",
+      "PIA": "PolyCab (11-03-2025)",
       "GPs in Scope": {
         "New/Upgraded": "81/8324",
         "Total": "8405"
@@ -194,13 +194,13 @@
       "Active FTTH Connections": "29493",
       "HOTO Completed GPs": {
         "Target": "4162",
-        "Count": "1900 (Further HOTO of 2654 GPs from Phase 2 expected Within June Gradually) ",
-        "Target Achieved %": "45.65"
+        "Count": "1029",
+        "Target Achieved %": "24.72369053"
       },
       "Survey Completed GPs": {
         "Physical (Target)": "420",
-        "Desktop/Physical": "3043/89",
-        "Target Achieved in Physical Survey%": "21.19"
+        "Desktop/Physical": "2746/73",
+        "Target Achieved in Physical Survey%": "17.38"
       },
       "Commissioned": {
         "Milestones (May 25)": "-",
@@ -208,7 +208,7 @@
       },
       "GP Deployment Metrics": {
         "GPs > 98% Last Week": "2591",
-        "GPs This Week": "2454",
+        "GPs This Week": "-",
         "SNOC": "1)Civil Work - Under Progress.\n2)Electrification :- Under progress.\n3)False Roofing    :- Near by Completed.\n4) Active Equipment:- BARCO video wall Material received , HP Workstation Material received.\n5) Transformer for Power extension is still pending for confirmation from BSNL.\n6)SNOC Fire Alarm system layout/ Door access control system Layout AC Layout/ Snoc Light layout/ Main power distribution/Voice/ data layout approval - pending.\n7)OEM make and model letter submitted -Approval pending from BSNL.\n",
         "No. of GPs (Dedicated Electric Connection)": "-"
       }
@@ -224,14 +224,14 @@
       },
       "Active FTTH Connections": "35585",
       "HOTO Completed GPs": {
-        "Target": "8925",
-        "Count": "-",
-        "Target Achieved %": "-"
+        "Target": "2975 ( As of 19 June)",
+        "Count": "1202",
+        "Target Achieved %": "60.86"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "-",
-        "Desktop/Physical": "0/0",
-        "Target Achieved in Physical Survey%": "-"
+        "Physical (Target)": "382 ( As of 19 June)",
+        "Desktop/Physical": "1446/250",
+        "Target Achieved in Physical Survey%": "65.44"
       },
       "Commissioned": {
         "Milestones (May 25)": "-",
@@ -240,7 +240,7 @@
       "GP Deployment Metrics": {
         "GPs > 98% Last Week": "1591",
         "GPs This Week": "-",
-        "SNOC": "-",
+        "SNOC": "1. Material : - SNOC IT and Non-IT material orders were placed in April, and delivery is scheduled.\n2. Civil & Electrical :- Wall work, punning, conduit installation, CCTV setup, and fire alarm system wiring are completed.\n3. Application :-\t API Integration started with OEMs.\n4. Documentation :- 2D and 3D layouts have been submitted and approved. HLD, LLD, and AT documents are in progress and HLD document will be submitted in coming week.",
         "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
@@ -253,7 +253,7 @@
         "New/Upgraded": "0/38",
         "Total": "38"
       },
-      "Active FTTH Connections": "35585",
+      "Active FTTH Connections": "-",
       "HOTO Completed GPs": {
         "Target": "-",
         "Count": "-",
@@ -261,7 +261,7 @@
       },
       "Survey Completed GPs": {
         "Physical (Target)": "-",
-        "Desktop/Physical": "0/0",
+        "Desktop/Physical": "-",
         "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
@@ -284,16 +284,16 @@
         "New/Upgraded": "6118/1819",
         "Total": "7937"
       },
-      "Active FTTH Connections": "14158",
+      "Active FTTH Connections": "35585",
       "HOTO Completed GPs": {
-        "Target": "-",
-        "Count": "-",
-        "Target Achieved %": "-"
+        "Target": "303 ( As of 19 June)",
+        "Count": "0",
+        "Target Achieved %": "0"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "-",
-        "Desktop/Physical": "0/0",
-        "Target Achieved in Physical Survey%": "-"
+        "Physical (Target)": "133 ( As of 19 June)",
+        "Desktop/Physical": "1830/51",
+        "Target Achieved in Physical Survey%": "38.34"
       },
       "Commissioned": {
         "Milestones (May 25)": "-",
@@ -302,7 +302,7 @@
       "GP Deployment Metrics": {
         "GPs > 98% Last Week": "719",
         "GPs This Week": "-",
-        "SNOC": "-",
+        "SNOC": "1. Material : - SNOC IT and Non-IT material orders were placed in April, and delivery is scheduled.\n2. Civil & Electrical :- Wall work, punning, conduit installation, and fire alarm system wiring are completed.\n3. Application :-\t API Integration started with OEMs.\n4. Documentation :- 2D and 3D layouts have been submitted and approved. HLD, LLD, and AT documents are in progress and HLD document will be submitted in coming week.",
         "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
@@ -715,7 +715,7 @@
       "Package Number": 4,
       "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
-        "New/Upgraded": "6/6084",
+        "New/Upgraded": "Jun-84",
         "Total": "6090"
       },
       "Active FTTH Connections": "31436",
@@ -746,7 +746,7 @@
       "Package Number": 4,
       "PIA": "AWO Issued / 05.05.2025",
       "GPs in Scope": {
-        "New/Upgraded": "12/98",
+        "New/Upgraded": "Dec-98",
         "Total": "110"
       },
       "Active FTTH Connections": "31436",
