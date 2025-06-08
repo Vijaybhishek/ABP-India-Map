@@ -199,8 +199,8 @@
       },
       "Survey Completed GPs": {
         "Physical (Target)": "420",
-        "Desktop/Physical": "3043/123",
-        "Target Achieved in Physical Survey%": "29.28"
+        "Desktop/Physical": "3043/89",
+        "Target Achieved in Physical Survey%": "21.19"
       },
       "Commissioned": {
         "Milestones (May 25)": "-",
@@ -224,14 +224,14 @@
       },
       "Active FTTH Connections": "35585",
       "HOTO Completed GPs": {
-        "Target": " 2975 ( As of 19 June)",
-        "Count": "1202",
-        "Target Achieved %": "40.4"
+        "Target": "8925",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": " 382 ( As of 19 June) ",
-        "Desktop/Physical": "1446/250",
-        "Target Achieved in Physical Survey%": "64.9"
+        "Physical (Target)": "-",
+        "Desktop/Physical": "0/0",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
         "Milestones (May 25)": "-",
@@ -239,11 +239,8 @@
       },
       "GP Deployment Metrics": {
         "GPs > 98% Last Week": "1591",
-        "GPs This Week": "1607",
-        "SNOC": "1. Material : - SNOC IT and Non-IT material orders were placed in April, and delivery is scheduled.
-2. Civil & Electrical :- Wall work, punning, conduit installation, CCTV setup, and fire alarm system wiring are completed.
-3. Application :-	 API Integration started with OEMs.
-4. Documentation :- 2D and 3D layouts have been submitted and approved. HLD, LLD, and AT documents are in progress and HLD document will be submitted in coming week.",
+        "GPs This Week": "-",
+        "SNOC": "-",
         "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
@@ -289,14 +286,14 @@
       },
       "Active FTTH Connections": "14158",
       "HOTO Completed GPs": {
-        "Target": "303",
-        "Count": "0",
-        "Target Achieved %": "0"
+        "Target": "-",
+        "Count": "-",
+        "Target Achieved %": "-"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "133 (( As of 19 June)",
-        "Desktop/Physical": "1830/51",
-        "Target Achieved in Physical Survey%": "38.34"
+        "Physical (Target)": "-",
+        "Desktop/Physical": "0/0",
+        "Target Achieved in Physical Survey%": "-"
       },
       "Commissioned": {
         "Milestones (May 25)": "-",
@@ -304,11 +301,8 @@
       },
       "GP Deployment Metrics": {
         "GPs > 98% Last Week": "719",
-        "GPs This Week": "789",
-        "SNOC": "1. Material : - SNOC IT and Non-IT material orders were placed in April, and delivery is scheduled.
-2. Civil & Electrical :- Wall work, punning, conduit installation, and fire alarm system wiring are completed.
-3. Application :-	 API Integration started with OEMs.
-4. Documentation :- 2D and 3D layouts have been submitted and approved. HLD, LLD, and AT documents are in progress and HLD document will be submitted in coming week.",
+        "GPs This Week": "-",
+        "SNOC": "-",
         "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
