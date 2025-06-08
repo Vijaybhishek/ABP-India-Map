@@ -186,7 +186,7 @@
   "Bihar": [
     {
       "Package Number": 7,
-      "PIA": "PolyCab (11-03-2025)",
+      "PIA": "Polycab (12-03-2025)",
       "GPs in Scope": {
         "New/Upgraded": "81/8324",
         "Total": "8405"
@@ -194,13 +194,13 @@
       "Active FTTH Connections": "29493",
       "HOTO Completed GPs": {
         "Target": "4162",
-        "Count": "1029",
-        "Target Achieved %": "24.72369053"
+        "Count": "1900",
+        "Target Achieved %": "45.65"
       },
       "Survey Completed GPs": {
         "Physical (Target)": "420",
-        "Desktop/Physical": "2746/73",
-        "Target Achieved in Physical Survey%": "17.38"
+        "Desktop/Physical": "2746/123",
+        "Target Achieved in Physical Survey%": "29.28"
       },
       "Commissioned": {
         "Milestones (May 25)": "-",
