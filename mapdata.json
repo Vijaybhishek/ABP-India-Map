@@ -16,7 +16,7 @@
       "Survey Completed GPs": {
         "Physical (Target)": "667",
         "Desktop/Physical": "7517/758",
-        "Target Achieved in Physical Survey%": "113.6431784"
+        "Target Achieved in Physical Survey%": "113.64"
       },
       "Commissioned": {
         "Milestones (May 25)": "-",
@@ -41,13 +41,13 @@
       "Active FTTH Connections": "19584",
       "HOTO Completed GPs": {
         "Target": "17214",
-        "Count": "11858",
-        "Target Achieved %": "68.8"
+        "Count": "18522",
+        "Target Achieved %": "107.59"
       },
       "Survey Completed GPs": {
         "Physical (Target)": "2154",
-        "Desktop/Physical": "14517 / 559",
-        "Target Achieved in Physical Survey%": "25.95"
+        "Desktop/Physical": "14517 / 2609",
+        "Target Achieved in Physical Survey%": "121.12"
       },
       "Commissioned": {
         "Milestones (May 25)": "-",
