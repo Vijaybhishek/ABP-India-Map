@@ -9,7 +9,7 @@
       },
       "Active FTTH Connections": "180175",
       "HOTO Completed GPs": {
-        "Target": "8443  (As Of  19th June",
+        "Target": "8443  (As Of  19th June)",
         "Count": "6226",
         "Target Achieved %": "73.74"
       },
@@ -25,7 +25,7 @@
       "GP Deployment Metrics": {
         "GPs > 98% Last Week": "7140",
         "GPs This Week": "-",
-        "SNOC": "CIVIL & ELECTRICAL WORK IN PROGRESS (Taget Skipped, Notice issued, Expected by 30.06.2025",
+        "SNOC": "CIVIL & ELECTRICAL WORK IN PROGRESS (Taget Skipped, Notice issued, Expected by 30.06.2025)",
         "No. of GPs (Dedicated Electric Connection)": "-"
       }
     }
@@ -105,7 +105,7 @@
         "Target Achieved %": "153.57"
       },
       "Survey Completed GPs": {
-        "Physical (Target)": "1 Milestone Achieved (Next Milestone Target 543 GPs))",
+        "Physical (Target)": "1 Milestone Achieved (Next Milestone Target 543 GPs)",
         "Desktop/Physical": "3615/258",
         "Target Achieved in Physical Survey%": "142"
       },
@@ -186,7 +186,7 @@
   "Bihar": [
     {
       "Package Number": 7,
-      "PIA": "PolyCab (12-03-2025)",
+      "PIA": "Polycab (12-03-2025)",
       "GPs in Scope": {
         "New/Upgraded": "81/8324",
         "Total": "8405"
